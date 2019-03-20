@@ -1,0 +1,13 @@
+2019-03-20 12:25:40  root(         lfm: 102)  I  Start lfm
+2019-03-20 12:25:40  lfm(          ui: 707)  I  Support wide chars: False
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item compress_uncompress_file
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item show_filesystems_info
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item change_owner
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item uncompress_dir_other_pane
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item diff_file_with_backup
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item compress_dir
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item move_file
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item uncompress_dir
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item change_perms
+2019-03-20 12:25:40  lfm( preferences: 317)  W  KEYS: Missing Action item backup_file
+2019-03-20 12:25:40  lfm( preferences: 385)  I  Load history file from "/root/.config/lfm/lfm.history"
