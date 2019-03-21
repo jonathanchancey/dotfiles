@@ -120,7 +120,10 @@ source /opt/ros/melodic/setup.bash
 alias ds='source devel/setup.bash'
 alias ghusky='roslaunch husky_gazebo husky_playpen.launch'
 alias sai='sudo apt install'
+alias wals='wal -i $HOME/Pictures/wallpapers'
+alias rfb='source ~/.bashrc'
+
+# (cat ~/.cache/wal/sequences &)
+(wal -R &)
 
 
-(cat ~/.cache/wal/sequences &)
-# (wal -r &)
