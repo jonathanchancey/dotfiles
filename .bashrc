@@ -137,3 +137,5 @@ export PATH="$PATH:/home/reika/.cargo/bin"
 
 
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

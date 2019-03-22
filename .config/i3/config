@@ -162,6 +162,11 @@ bar {
         status_command i3status
 }
 
+# added nm-applet on startup
+exec --no-startup-id nm-applet
+
+
+
 # added polybar instead
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # removed polybar
@@ -171,6 +176,7 @@ exec nitrogen --restore
 # compton start for window effects
 exec --no-startup-id compton
 exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g = "i3blocks"' --config ~/.config/compton2.conf -b
+
 
 # added lemonbar 
 # exec $USER/.config/i3/i3_lemonbar.sh
