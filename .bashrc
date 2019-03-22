@@ -122,8 +122,18 @@ alias ghusky='roslaunch husky_gazebo husky_playpen.launch'
 alias sai='sudo apt install'
 alias wals='wal -i $HOME/Pictures/wallpapers'
 alias rfb='source ~/.bashrc'
+alias ei3='vim ~/.config/i3/config'
+alias ebrc='vim ~/.bashrc'
+alias rfxr='xrdb ~/.Xresources'
 
-# (cat ~/.cache/wal/sequences &)
-(wal -R &)
+# adds contents of .scripts and subdirectories to path.
+export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+
+export PATH="$PATH:/home/reika/.cargo/bin"
+
+(cat ~/.cache/wal/sequences &)
+# (wal -R &)
+
+
 
 

@@ -30,7 +30,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 
 # compton settings
 # exec /usr/bin/compton --config $HOME/.compton.conf~.i3/config
@@ -175,6 +175,25 @@ exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g
 # added lemonbar 
 # exec $USER/.config/i3/i3_lemonbar.sh
 
+# quick resize keybinds
+bindsym $mod+Shift+y resize shrink width 5 px or 5 ppt
+bindsym $mod+Shift+u resize grow height 5 px or 5 ppt
+bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
+bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+
+# boarder settings
+# default_border none
+for_window [class="^.*"] border pixel 0
+
+
+# desktop keybinds
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Control+Left workspace prev
+bindsym $mod+Control+Shift+Left move container to workspace prev
+bindsym $mod+Control+Right workspace next
+bindsym $mod+Control+Shift+Right move container to workspace next
+# bindsym $mod+semicolon workspace next
+
 # # Set colors from Xresources
 # # Change 'color7' and 'color2' to whatever colors you want i3 to use
 # # from the generated scheme.
@@ -195,11 +214,24 @@ exec --no-startup-id compton --opacity-rule '100:window_type = "dock" && class_g
 # PROTIP: You can also dynamically set dmenu's colors this way:
 # bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
 
-# Volume control
-bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute 0 toggle
+# # Volume control
+# bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +5%
+# bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -5%
+# bindsym XF86AudioMute           exec --no-startup-id pactl set-sink-mute 0 toggle
 
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl -- set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl -- set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Screen brightness controls with notification
+bindsym XF86MonBrightnessUp exec light -A 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -U 5 # decrease screen brightness
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 #############################
 ### settings for i3-gaps: ###
