@@ -165,7 +165,14 @@ bar {
 # added nm-applet on startup
 exec --no-startup-id nm-applet
 
+# TODO make exclusive to Laptop config. Set's tap-to-click on.
+exec --no-startup-id xinput set-prop 12 282 1
 
+#change keyrepeat settings
+exec --no-startup-id xset r rate 300 35
+
+exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
 # added polybar instead
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
