@@ -1,0 +1,47 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_by_default: false
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+dotfiles:
+  f_bash_aliases:
+    dst: ~/.bash_aliases
+    src: bash_aliases
+  f_bash_profile:
+    dst: ~/.bash_profile
+    src: bash_profile
+  f_bashrc:
+    dst: ~/.bashrc
+    src: bashrc
+  f_compton.conf:
+    dst: ~/.config/compton.conf
+    src: config/compton.conf
+  f_i3-scrot.conf:
+    dst: ~/.config/i3-scrot.conf
+    src: config/i3-scrot.conf
+  f_profile:
+    dst: ~/.profile
+    src: profile
+  f_xinitrc:
+    dst: ~/.xinitrc
+    src: xinitrc
+  f_xresources:
+    dst: ~/.Xresources
+    src: Xresources
+profiles:
+  pholipid:
+    dotfiles:
+    - f_xinitrc
+    - f_i3-scrot.conf
+    - f_compton.conf
+    - f_xresources
+    - f_profile
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
