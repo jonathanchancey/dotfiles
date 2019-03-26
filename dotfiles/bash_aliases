@@ -6,7 +6,7 @@ alias c=code
 
 
 # ros vars and aliases
-source /opt/ros/melodic/setup.bash
+# source /opt/ros/melodic/setup.bash
 # source devel/setup.bash
 alias ds='source devel/setup.bash'
 export devel=devel/setup.bash
@@ -19,3 +19,6 @@ alias rb='source ~/.bashrc'
 alias ei3='vim ~/.i3/config'
 alias eb='vim ~/.bashrc'
 alias rxr='xrdb ~/.Xresources'
+
+
+alias p='sudo pacman'
