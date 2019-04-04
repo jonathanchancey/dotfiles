@@ -31,6 +31,9 @@ dotfiles:
   f_profile:
     dst: ~/.profile
     src: profile
+  f_tmux.conf:
+    dst: ~/.tmux.conf
+    src: tmux.conf
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
@@ -49,3 +52,4 @@ profiles:
     - f_bash_aliases
     - f_bash_profile
     - d_i3
+    - f_tmux.conf
