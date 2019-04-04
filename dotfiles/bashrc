@@ -119,6 +119,9 @@ alias l='ls -CF'
 # adds contents of .scripts and subdirectories to path.
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
+#adds contents of Applications and subdirectories to path.
+export PATH="$PATH:$(du "$HOME/Applications/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+
 # for rust applications
 export PATH="$PATH:/home/reika/.cargo/bin"
 

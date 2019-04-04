@@ -13,6 +13,9 @@ dotfiles:
   d_i3:
     dst: ~/.i3
     src: i3
+  d_scripts:
+    dst: ~/.scripts
+    src: scripts
   f_bash_aliases:
     dst: ~/.bash_aliases
     src: bash_aliases
@@ -25,6 +28,9 @@ dotfiles:
   f_compton.conf:
     dst: ~/.config/compton.conf
     src: config/compton.conf
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
   f_i3-scrot.conf:
     dst: ~/.config/i3-scrot.conf
     src: config/i3-scrot.conf
@@ -53,3 +59,5 @@ profiles:
     - f_bash_profile
     - d_i3
     - f_tmux.conf
+    - d_scripts
+    - f_gitconfig

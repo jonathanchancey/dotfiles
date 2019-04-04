@@ -20,6 +20,6 @@ alias rb='source ~/.bashrc'
 alias ei3='vim ~/.i3/config'
 alias eb='vim ~/.bashrc'
 alias rxr='xrdb ~/.Xresources'
+alias s='source'
 
-
-alias p='sudo pacman
+alias p='sudo pacman'
