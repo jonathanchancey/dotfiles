@@ -103,9 +103,6 @@ complete -cf sudo
 
 # coruvars
 
-# activate vi mode with <Escape>:
-set -o vi
-
 # ensure new shells have correct pywal colorscheme
 (cat ~/.cache/wal/sequences &)
 

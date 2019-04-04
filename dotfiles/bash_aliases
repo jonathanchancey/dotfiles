@@ -13,7 +13,8 @@ export devel=devel/setup.bash
 alias ghusky='roslaunch husky_gazebo husky_playpen.launch'
 
 # general use
-# alias sai='sudo apt install' 
+# alias sai='sudo apt install'
+alias waldir='cd $HOME/Pictures/wallpapers'
 alias wals='wal -i $HOME/Pictures/wallpapers'
 alias rb='source ~/.bashrc'
 alias ei3='vim ~/.i3/config'
@@ -21,4 +22,4 @@ alias eb='vim ~/.bashrc'
 alias rxr='xrdb ~/.Xresources'
 
 
-alias p='sudo pacman'
+alias p='sudo pacman
