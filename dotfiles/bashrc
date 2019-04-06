@@ -103,6 +103,10 @@ complete -cf sudo
 
 # coruvars
 
+# adds rust to path
+source $HOME/.cargo/env
+
+
 # ensure new shells have correct pywal colorscheme
 (cat ~/.cache/wal/sequences &)
 
