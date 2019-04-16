@@ -49,3 +49,12 @@ profiles:
     - f_bash_aliases
     - f_bash_profile
     - d_i3
+  Miya:
+    dotfiles:
+    - f_xinitrc
+    - f_i3-scrot.conf
+    - f_compton.conf
+    - f_profile
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
