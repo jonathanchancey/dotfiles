@@ -103,9 +103,12 @@ complete -cf sudo
 
 # coruvars
 
+# adds rust to path
+source $HOME/.cargo/env
+
+
 # ensure new shells have correct pywal colorscheme
 (cat ~/.cache/wal/sequences &)
-
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -118,6 +121,9 @@ alias l='ls -CF'
 
 # adds contents of .scripts and subdirectories to path.
 export PATH="$PATH:$(du "$HOME/.scripts/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
+
+#adds contents of Applications and subdirectories to path.
+export PATH="$PATH:$(du "$HOME/Applications/" | cut -f2 | tr '\n' ':' | sed 's/:*$//')"
 
 # for rust applications
 export PATH="$PATH:/home/reika/.cargo/bin"

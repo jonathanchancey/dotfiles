@@ -5,7 +5,7 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
-  link_by_default: false
+  link_on_import: nolink
   longkey: false
   showdiff: false
   workdir: ~/.config/dotdrop
@@ -13,6 +13,9 @@ dotfiles:
   d_i3:
     dst: ~/.i3
     src: i3
+  d_scripts:
+    dst: ~/.scripts
+    src: scripts
   f_bash_aliases:
     dst: ~/.bash_aliases
     src: bash_aliases
@@ -25,12 +28,18 @@ dotfiles:
   f_compton.conf:
     dst: ~/.config/compton.conf
     src: config/compton.conf
+  f_gitconfig:
+    dst: ~/.gitconfig
+    src: gitconfig
   f_i3-scrot.conf:
     dst: ~/.config/i3-scrot.conf
     src: config/i3-scrot.conf
   f_profile:
     dst: ~/.profile
     src: profile
+  f_tmux.conf:
+    dst: ~/.tmux.conf
+    src: tmux.conf
   f_xinitrc:
     dst: ~/.xinitrc
     src: xinitrc
@@ -49,6 +58,7 @@ profiles:
     - f_bash_aliases
     - f_bash_profile
     - d_i3
+<<<<<<< HEAD
   Miya:
     dotfiles:
     - f_xinitrc
@@ -58,3 +68,8 @@ profiles:
     - f_bashrc
     - f_bash_aliases
     - f_bash_profile
+=======
+    - f_tmux.conf
+    - d_scripts
+    - f_gitconfig
+>>>>>>> e5e268c93235a429b2a0099a080587f65c7f72ad
