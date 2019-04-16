@@ -58,18 +58,14 @@ profiles:
     - f_bash_aliases
     - f_bash_profile
     - d_i3
-<<<<<<< HEAD
-  Miya:
-    dotfiles:
-    - f_xinitrc
-    - f_i3-scrot.conf
-    - f_compton.conf
-    - f_profile
-    - f_bashrc
-    - f_bash_aliases
-    - f_bash_profile
-=======
     - f_tmux.conf
     - d_scripts
     - f_gitconfig
->>>>>>> e5e268c93235a429b2a0099a080587f65c7f72ad
+  Miya:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
+    - f_tmux.conf
+    - d_scripts
+    - f_gitconfig
