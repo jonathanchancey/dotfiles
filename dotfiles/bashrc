@@ -110,7 +110,6 @@ source $HOME/.cargo/env
 # ensure new shells have correct pywal colorscheme
 (cat ~/.cache/wal/sequences &)
 
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi

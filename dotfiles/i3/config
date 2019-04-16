@@ -43,7 +43,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ################################################################################################
 
 exec --no-startup-id volumeicon
-##bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+###bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
@@ -140,6 +140,15 @@ bindsym $mod+minus scratchpad show
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
 
+
+
+# projector
+bindsym $mod+p workspace 11
+bindsym $mod+Shift+p move container to workspace 11
+
+workspace 11 output DP-2
+
+
 # Workspace names
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
@@ -216,6 +225,8 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
+
+for_window [class="Pcmanfm"] floating enable
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
