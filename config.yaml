@@ -5,7 +5,6 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
-  link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
   showdiff: false
@@ -59,6 +58,14 @@ profiles:
     - f_bash_aliases
     - f_bash_profile
     - d_i3
+    - f_tmux.conf
+    - d_scripts
+    - f_gitconfig
+  Miya:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
     - f_tmux.conf
     - d_scripts
     - f_gitconfig
