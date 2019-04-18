@@ -1,3 +1,4 @@
+git pull
 ~/.dotfiles/dotdrop.sh update 
 
 cd ~/.dotfiles/
