@@ -1,0 +1,48 @@
+file:///home/phos/Repos/fullstack_workshop/server/backEnd.py
+from flask import Flask, request
+import sqlite3 as sql
+import json
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
+
+# routes here
+
+@app.after_request
+def after_request(response):
+#   response.headers.add('Access-Control-Allow-Origin', 'http://localhost:3000')
+  response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+  response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+  response.headers.add('Access-Control-Allow-Credentials', 'true')
+  response.headers.add('Access-Control-Allow-Origin', '*')
+  return response
+
+@app.route("/")
+def home():
+    return "Hello World!"
+
+@app.route("/postStats", methods=["POST","GET"])
+def postStats():h
+    if(request.method == "POST"):hhj
+        
+        print("Request:",request.data)
+        store = (json.load(request.data))["data"]
+        truckID = store["truckID"]
+        date = store["date"]
+        time = store["time"]
+        clutch = store["clutch"]
+        starter = store["starter"]
+        battery = store["battery"]
+        comment = store["comment"]
+
+        connect = sql.connect("truck.db")
+        cursor = connect.cursor()
+
+        cursor.execute("INSERT date (f_date, f_time, f_truckID VALUES ({},{},{})".format(date,time,truckID))
+        connect.commit()
+        cursor.execute('''INSERT INTO inspection(i_truckID,i_battery,i_starter,i_clutch,i_comment) VALUES ({},{},{},{},{})'''.format(truckID,battery,starter,clutch,comment))
+        return "SUCCESS"
+
+if __name__ == '__main__':
+    app.run(debug = True)

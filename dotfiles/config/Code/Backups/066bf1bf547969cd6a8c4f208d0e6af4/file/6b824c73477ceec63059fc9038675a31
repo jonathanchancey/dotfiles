@@ -1,0 +1,28 @@
+file:///home/phos/Repos/fullstack_workshop/src/components/navBar.jsx
+import React, { Component } from 'react';
+
+//ENABLES US TO RENDER DIFFERENT COMPONENTS BASED ON URL
+
+import {Link} from "react-router-dom";
+
+
+class NavBar extends Component {
+    state = {}
+    render() {
+        return (
+            <React.Fragment>
+                <nav className = "navbar is-warning">
+                <div className = "navbar-end">
+                    <Link className = "navbar-item" to = "/stats">
+
+                        Truck Stats
+
+                    </Link>
+                </div>
+                </nav>jhujhu
+hju            </React.Fhyjhjuragment>
+        );jhujhjhu
+    }jhujhuhyjhyj
+}jhjhyu
+hhyjujhjhhjjhu
+export djhyefault NavBahjyuhyjjhrjjhjhjjhuhjjhuh;jjhjhyuhuuyhukjuhjjhujhhjjhhjhjhuuujhhjhjhjyuujhjjjjhjjhjjhuhjhjjhuhuyjhujhjjhuhjhjjhjhuhjjhuyhjhhjyjhjhuujhhjhjhhjjhhjyujhujhjhujhuhjyujhyujhjhuyj

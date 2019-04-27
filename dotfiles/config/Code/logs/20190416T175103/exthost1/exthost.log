@@ -1,0 +1,28 @@
+[2019-04-16 17:51:05.604] [exthost] [info] extension host started
+[2019-04-16 17:51:05.685] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.685] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-04-16 17:51:05.690] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.690] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/emmet/dist/extension
+[2019-04-16 17:51:05.695] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.695] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/git/dist/main
+[2019-04-16 17:51:05.732] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.732] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/merge-conflict/dist/extension
+[2019-04-16 17:51:05.736] [exthost] [info] ExtensionService#_doActivateExtension golf1052.base16-generator {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.736] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/golf1052.base16-generator-1.8.0/out/src/extension
+[2019-04-16 17:51:05.739] [exthost] [info] ExtensionService#_doActivateExtension naumovs.color-highlight {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.739] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/naumovs.color-highlight-2.3.0/dist/extension
+[2019-04-16 17:51:05.753] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-04-16 17:51:05.753] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/vscode-icons-team.vscode-icons-8.5.0/out/src/
+[2019-04-16 17:51:05.841] [exthost] [info] eager extensions activated
+[2019-04-16 17:52:32.956] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-16 17:52:32.957] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/configuration-editing/dist/extension
+[2019-04-16 17:52:32.960] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-16 17:52:32.960] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-04-16 17:52:32.979] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-16 17:52:32.979] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-04-17 08:12:40.532] [exthost] [info] ExtensionService#_doActivateExtension vscode.extension-editing {"startup":false,"activationEvent":"onLanguage:markdown"}
+[2019-04-17 08:12:40.532] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/extension-editing/dist/extension
+[2019-04-17 08:12:40.546] [exthost] [info] ExtensionService#_doActivateExtension vscode.markdown-language-features {"startup":false,"activationEvent":"onLanguage:markdown"}
+[2019-04-17 08:12:40.546] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/markdown-language-features/dist/extension
+[2019-04-17 08:12:40.997] [exthost] [info] ExtensionService#_doActivateExtension vstirbu.vscode-mermaid-preview {"startup":false}
+[2019-04-17 08:12:40.997] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/vstirbu.vscode-mermaid-preview-0.11.2/extension

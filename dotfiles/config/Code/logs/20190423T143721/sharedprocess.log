@@ -1,0 +1,24 @@
+[2019-04-23 14:37:25.185] [sharedprocess] [info] main {"machineId":"a4c7eb2719b91130684cbc5ea908b9a7035615bb6a16d4408d3bdbc98dfd96bb"}
+[2019-04-23 14:37:25.310] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:25.333] [sharedprocess] [info] vscode-icons-team.vscode-icons 8.5.0 Running post uninstall script
+[2019-04-23 14:37:25.344] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:25.531] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-23 14:37:25.621] [sharedprocess] [info] vscode-icons-team.vscode-icons 8.5.0 Finished running post uninstall script
+[2019-04-23 14:37:25.630] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-23 14:37:25.785] [sharedprocess] [info] Deleted from disk ms-mssql.mssql /home/phos/.vscode/extensions/ms-mssql.mssql-1.5.0
+[2019-04-23 14:37:25.795] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:25.798] [sharedprocess] [info] Deleted from disk vscode-icons-team.vscode-icons /home/phos/.vscode/extensions/vscode-icons-team.vscode-icons-8.5.0
+[2019-04-23 14:37:36.800] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:36.808] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:36.811] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:36.819] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:36.881] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-23 14:37:36.890] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-23 14:37:36.896] [sharedprocess] [info] Scanned system extensions: 72
+[2019-04-23 14:37:41.887] [sharedprocess] [info] Installing extension: nopjmp.fairyfloss
+[2019-04-23 14:37:41.903] [sharedprocess] [info] Scanned user extensions: 12
+[2019-04-23 14:37:42.070] [sharedprocess] [info] Downloaded extension: nopjmp.fairyfloss /tmp/65b67921-3a1f-4439-8b55-2c8c286696c2
+[2019-04-23 14:37:42.132] [sharedprocess] [info] Extracted extension to /home/phos/.vscode/extensions/.nopjmp.fairyfloss-0.0.5: nopjmp.fairyfloss
+[2019-04-23 14:37:42.133] [sharedprocess] [info] Renamed to /home/phos/.vscode/extensions/nopjmp.fairyfloss-0.0.5
+[2019-04-23 14:37:42.134] [sharedprocess] [info] Installation completed. nopjmp.fairyfloss
+[2019-04-23 14:37:42.147] [sharedprocess] [info] Extensions installed successfully: nopjmp.fairyfloss

@@ -1,0 +1,22 @@
+[2019-04-23 14:37:23.573] [exthost] [info] extension host started
+[2019-04-23 14:37:23.751] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.751] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-04-23 14:37:23.760] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.760] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/emmet/dist/extension
+[2019-04-23 14:37:23.795] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.795] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/git/dist/main
+[2019-04-23 14:37:23.913] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.913] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/merge-conflict/dist/extension
+[2019-04-23 14:37:23.919] [exthost] [info] ExtensionService#_doActivateExtension golf1052.base16-generator {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.919] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/golf1052.base16-generator-1.8.0/out/src/extension
+[2019-04-23 14:37:23.921] [exthost] [info] ExtensionService#_doActivateExtension naumovs.color-highlight {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.921] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/naumovs.color-highlight-2.3.0/dist/extension
+[2019-04-23 14:37:23.954] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-04-23 14:37:23.954] [exthost] [info] ExtensionService#loadCommonJSModule /home/phos/.vscode/extensions/vscode-icons-team.vscode-icons-8.6.0/out/src/
+[2019-04-23 14:37:24.034] [exthost] [info] eager extensions activated
+[2019-04-23 14:37:44.635] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-23 14:37:44.635] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/configuration-editing/dist/extension
+[2019-04-23 14:37:44.648] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-23 14:37:44.648] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-04-23 14:37:44.713] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-04-23 14:37:44.713] [exthost] [info] ExtensionService#loadCommonJSModule /opt/visual-studio-code/resources/app/extensions/typescript-language-features/dist/extension

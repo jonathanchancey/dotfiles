@@ -5,6 +5,7 @@ config:
   dotpath: dotfiles
   ignoreempty: false
   keepdot: false
+  link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
   showdiff: false
@@ -46,7 +47,18 @@ dotfiles:
   f_xresources:
     dst: ~/.Xresources
     src: Xresources
+  f_zshrc:
+    dst: ~/.zshrc
+    src: zshrc
 profiles:
+  Miya:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
+    - f_tmux.conf
+    - d_scripts
+    - f_gitconfig
   pholipid:
     dotfiles:
     - f_xinitrc
@@ -61,11 +73,5 @@ profiles:
     - f_tmux.conf
     - d_scripts
     - f_gitconfig
-  Miya:
-    dotfiles:
-    - f_bashrc
-    - f_bash_aliases
-    - f_bash_profile
-    - f_tmux.conf
-    - d_scripts
-    - f_gitconfig
+    - d_code
+    - f_zshrc

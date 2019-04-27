@@ -1,0 +1,10 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 1,
+    "python.jediEnabled": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "explorer.confirmDelete": false,
+    "git.autofetch": true,
+    "workbench.colorTheme": "fairyfloss"
+}

@@ -5,6 +5,10 @@
 alias c=code
 alias dotd='~/.dotfiles/dotdrop.sh'
 
+# run like dp2 2x2
+alias dp2='xrandr --output DP-2 --auto --scale'
+
+
 # ros vars and aliases
 # source /opt/ros/melodic/setup.bash
 # source devel/setup.bash
