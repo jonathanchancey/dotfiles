@@ -149,7 +149,8 @@ bindsym $mod+p workspace 11
 bindsym $mod+Shift+p move container to workspace 11
 
 # scrot 
-bindsym --release $mod+Shift+s exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/' && xclip ~/shots/$f 
+bindsym --release $mod+Shift+s exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'
+# bindsym --release $mod+Shift+s exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/' && xclip ~/shots/$f 
 # exec i3-msg workspace 1; i3lock -c 111111 -d
 
 
