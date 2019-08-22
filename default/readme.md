@@ -1,0 +1,1 @@
+This directory is meant to be appended to existing dotfiles for specific situations meant to be as specific yet as applicable as possible.
