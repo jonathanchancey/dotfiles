@@ -73,5 +73,16 @@ profiles:
     - f_tmux.conf
     - d_scripts
     - f_gitconfig
-    - d_code
     - f_zshrc
+  ducky-107.localdomain:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
+    - f_tmux.conf
+    - d_scripts
+    - f_compton.conf
+    - f_xresources
+    - d_i3
+    - f_i3-scrot.conf
+    - f_xinitrc
