@@ -5,6 +5,3 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 export PATH="$HOME/.cargo/bin:$PATH"
-
-
-export terminal="/usr/bin/urxvt"

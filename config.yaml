@@ -56,6 +56,9 @@ dotfiles:
   f_config.ducky-107:
     src: i3/config.ducky-107
     dst: ~/.i3/config.ducky-107
+  d_cat:
+    src: dotfiles/cat
+    dst: ~/.dotfiles/cat
 profiles:
   Miya:
     dotfiles:
@@ -94,3 +97,4 @@ profiles:
     - f_xinitrc
     - f_config.base
     - f_config.ducky-107
+    - d_cat

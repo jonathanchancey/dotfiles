@@ -27,7 +27,7 @@ font xft:URWGothic-Book 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec $terminal
 
 # kill focused window
 bindsym $mod+w kill
@@ -459,3 +459,9 @@ exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 
 exec --no-startup-id wals
+
+# i3 ducky-107 machine config
+
+
+exec --no-startup-id xrandr --output VGA-1 --primary --mode 1920x1080 --pos 0x840 --rotate normal --output DP-1 --off --output HDMI-1 --off --output HDMI-2 --mode 1920x1200 --pos 1920x0 --rotate left --output HDMI-3 --off
+exec --no-startup-id mount /dev/sdb2 /mnt/hak
