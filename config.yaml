@@ -50,6 +50,12 @@ dotfiles:
   f_zshrc:
     dst: ~/.zshrc
     src: zshrc
+  f_config.base:
+    src: i3/config.base
+    dst: ~/.i3/config.base
+  f_config.ducky-107:
+    src: i3/config.ducky-107
+    dst: ~/.i3/config.ducky-107
 profiles:
   Miya:
     dotfiles:
@@ -86,3 +92,5 @@ profiles:
     - d_i3
     - f_i3-scrot.conf
     - f_xinitrc
+    - f_config.base
+    - f_config.ducky-107

@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 
+
 [[ $- != *i* ]] && return
 
 colors() {
@@ -90,6 +91,25 @@ fi
 
 unset use_color safe_term match_lhs sh
 
+
+# concatenate files with their hostname counterparts if they exist
+# TODO doesn't check if base exists, should always exist
+# we're playing with fire here, needs more checks
+shortname="$(hostname -s)"
+commandpath="${HOME}/.i3/config."
+hostnamecpath="${commandpath}${shortname}"
+if [ -f "$hostnamecpath" ]; then
+    echo "$hostnamecpath exists"
+	cat ~/.config/i3/config.base > ~/.config/i3/config
+	cat hostnamecpath >> ~/.config/i3/config
+else 
+    echo "$hostnamecpath does not exist"
+fi
+
+
+
+
+
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
@@ -113,6 +133,9 @@ source $HOME/.cargo/env
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+
+export terminal="/usr/bin/urxvt"
 
 # some more ls aliases
 alias ll='ls -alF'
