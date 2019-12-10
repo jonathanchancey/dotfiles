@@ -1,10 +1,17 @@
+
+
+
+{%@@ if profile == "pholipid" @@%}
 Xft.dpi:       180
+{%@@ endif @@%}
+
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb
 Xft.autohint:  false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+
 
 XTerm*background:        #222D31
 XTerm*foreground:        #d8d8d8
@@ -60,7 +67,7 @@ Xcursor.size:                     0
 !URxvt.font:                       xft:TerminessTTFNerdFontMono:size:32
 
 !URxvt.font: xft:Ubuntu Mono:size=11
-!URxvt.font: xft:Fira Code:size=11
+!URxvt.font: xft:Fira Code:sipholipidze=11
 !URxvt.font: xft:3270 Medium:size=11
 !URxvt.font: xft:DroidSansMono:size:32
 URxvt.font: xft:Deja Vu Sans Mono:size=10

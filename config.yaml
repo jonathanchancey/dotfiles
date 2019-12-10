@@ -50,6 +50,15 @@ dotfiles:
   f_zshrc:
     dst: ~/.zshrc
     src: zshrc
+  f_config.base:
+    src: i3/config.base
+    dst: ~/.i3/config.base
+  f_config.ducky-107:
+    src: i3/config.ducky-107
+    dst: ~/.i3/config.ducky-107
+  d_cat:
+    src: dotfiles/cat
+    dst: ~/.dotfiles/cat
 profiles:
   Miya:
     dotfiles:
@@ -73,5 +82,19 @@ profiles:
     - f_tmux.conf
     - d_scripts
     - f_gitconfig
-    - d_code
     - f_zshrc
+  ducky-107.localdomain:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
+    - f_tmux.conf
+    - d_scripts
+    - f_compton.conf
+    - f_xresources
+    - d_i3
+    - f_i3-scrot.conf
+    - f_xinitrc
+    - f_config.base
+    - f_config.ducky-107
+    - d_cat
