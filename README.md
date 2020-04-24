@@ -10,6 +10,3 @@ git submodule update --recursive --remote
 
 https://www.reddit.com/r/i3wm/comments/5nsr65/how_to_include_config_files_into_main_config_and/dce0i3j/
 
-## Attempt at a Software List
-
-exfat-utils
