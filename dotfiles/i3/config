@@ -147,9 +147,9 @@ bindsym $mod+Ctrl+Left workspace prev
 bindsym $mod+Shift+Ctrl+Right move container to workspace next
 bindsym $mod+Shift+Ctrl+Left move container to workspace prev
 
-# projector
-bindsym $mod+p workspace 11
-bindsym $mod+Shift+p move container to workspace 11
+# # projector
+# bindsym $mod+y workspace 11
+# bindsym $mod+Shift+y move container to workspace 11
 
 # scrot 
 bindsym --release $mod+Shift+s exec scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f ~/shots/'
@@ -258,7 +258,7 @@ mode "$mode_system" {
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
     bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym p workspace 11 output DP-2
+#     bindsym y workspace 11 output DP-2
     bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
 
     # exit system mode: "Enter" or "Escape"
@@ -445,10 +445,10 @@ mode "$mode_gaps_outer" {
 # coruditions
 
 # quick resize keybinds
-bindsym $mod+Shift+y resize shrink width 5 px or 5 ppt
-bindsym $mod+Shift+u resize grow height 5 px or 5 ppt
-bindsym $mod+Shift+i resize shrink height 5 px or 5 ppt
-bindsym $mod+Shift+o resize grow width 5 px or 5 ppt
+bindsym $mod+Shift+u resize shrink width 5 px or 5 ppt
+bindsym $mod+Shift+i resize grow height 5 px or 5 ppt
+bindsym $mod+Shift+o resize shrink height 5 px or 5 ppt
+bindsym $mod+Shift+p resize grow width 5 px or 5 ppt
 
 
 #change keyrepeat settings
