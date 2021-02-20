@@ -57,7 +57,7 @@ dotfiles:
     src: i3/config.ducky-107
     dst: ~/.i3/config.ducky-107
   d_cat:
-    src: dotfiles/cat
+    src: cat
     dst: ~/.dotfiles/cat
 profiles:
   Miya:
@@ -84,6 +84,21 @@ profiles:
     - f_gitconfig
     - f_zshrc
   ducky-107.localdomain:
+    dotfiles:
+    - f_bashrc
+    - f_bash_aliases
+    - f_bash_profile
+    - f_tmux.conf
+    - d_scripts
+    - f_compton.conf
+    - f_xresources
+    - d_i3
+    - f_i3-scrot.conf
+    - f_xinitrc
+    - f_config.base
+    - f_config.ducky-107
+    - d_cat
+  ball:
     dotfiles:
     - f_bashrc
     - f_bash_aliases
