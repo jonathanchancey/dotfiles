@@ -2,14 +2,14 @@
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
 }
 
 @import url("../../.cache/wal/colors-waybar.css");
 
 window#waybar {
   background-color: @background;
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  /* border-bottom: 3px solid @foreground; */
   color: #ffffff;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -53,7 +53,7 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 0 5px;
+  padding: 0 0px;
   background-color: transparent;
   color: #ffffff;
 }
@@ -71,10 +71,10 @@ button:hover {
   background-color: #eb4d4b;
 }
 
-#mode {
-  background-color: #64727d;
-  border-bottom: 3px solid #ffffff;
-}
+/* #mode { */
+/*   background-color: #64727d; */
+/*   border-bottom: 3px solid #ffffff; */
+/* } */
 
 #clock,
 #battery,
@@ -112,12 +112,13 @@ button:hover {
 }
 
 #clock {
-  background-color: #64727d;
+  background-color: @color2;
 }
 
 #battery {
   background-color: #ffffff;
   color: #000000;
+  /* as */
 }
 
 #battery.charging,
@@ -148,12 +149,12 @@ label:focus {
 }
 
 #cpu {
-  background-color: #2ecc71;
+  background-color: @color4;
   color: #000000;
 }
 
 #memory {
-  background-color: #9b59b6;
+  background-color: @color5;
 }
 
 #disk {
@@ -165,7 +166,7 @@ label:focus {
 }
 
 #network {
-  background-color: #2980b9;
+  background-color: @color5;
 }
 
 #network.disconnected {
@@ -173,7 +174,7 @@ label:focus {
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
+  background-color: @color3;
   color: #000000;
 }
 
@@ -206,7 +207,7 @@ label:focus {
 }
 
 #temperature {
-  background-color: #f0932b;
+  background-color: @color6;
 }
 
 #temperature.critical {
