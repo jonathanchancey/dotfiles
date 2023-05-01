@@ -2,6 +2,8 @@
 
 # screenshot_dir
 
+# logging
+date +"%a %b %d %I:%m %p" >> $HOME/.config/wal/changed.log
 
 set -l file (random choice /home/coal/pictures/wallpapers/*)
 wal -n -i $file
