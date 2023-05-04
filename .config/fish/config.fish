@@ -6,6 +6,8 @@ source $HOME/.env
 
 wal -Rq
 
+fish_add_path $HOME/scripts/
+
 
 # functions
 
