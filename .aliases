@@ -8,6 +8,7 @@ alias xq="xbps-query -Rs"
 alias ls='ls --color=auto'
 alias setmon=/home/coal/.local/bin/set-monitor.sh
 alias vim=nvim
+alias ranger=$HOME/git/ranger/ranger.py
 
 # dotfiles command
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
