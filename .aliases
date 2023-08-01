@@ -1,14 +1,13 @@
 # aliases
 # xbps quality of life 
-alias xi="sudo xbps-install -S"
-alias xr="sudo xbps-remove"
+alias xi="xbps-install -S"
+alias xr="xbps-remove"
 alias xq="xbps-query -Rs"
 
 # normal aliases
 alias ls='ls --color=auto'
 alias setmon=/home/coal/.local/bin/set-monitor.sh
-alias vim=nvim
-alias ranger=$HOME/git/ranger/ranger.py
+alias vim=hx
 
 # dotfiles command
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'

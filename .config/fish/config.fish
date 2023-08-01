@@ -5,13 +5,7 @@ end
 source $HOME/.env
 source $HOME/.aliases
 
-wal -Rq
-
 fish_add_path $HOME/scripts/
-
-if test $XDG_SESSION_TYPE = wayland
-    source $HOME/.env_wayland
-end
 
 # functions
 
