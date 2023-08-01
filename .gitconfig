@@ -4,11 +4,5 @@
 	required = true
 	clean = git-lfs clean -- %f
 [user]
-	email = jonathan@chancey.dev
+	email = jonathan.chancey@solidigm.com
 	name = Jonathan Chancey
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
