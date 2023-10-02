@@ -9,11 +9,23 @@ wal -Rq
 
 fish_add_path $HOME/scripts/
 
+set -gx PATH $PATH $HOME/.krew/bin
+
+set -xg KUBECONFIG /home/coal/.kube/academy-config
+
 if test $XDG_SESSION_TYPE = wayland
     source $HOME/.env_wayland
 end
 
 # functions
+
+function cpr
+    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 $argv
+end
+
+function mvr
+    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv
+end
 
 # theme.sh
 if type -q theme.sh
