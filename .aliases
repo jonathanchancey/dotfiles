@@ -24,3 +24,11 @@ alias ef="$EDITOR $HOME/.config/fish/config.fish"
 alias eb="$EDITOR $HOME/.bashrc"
 alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
 alias ehp="$EDITOR $HOME/.config/hypr/hyprpaper.conf"
+
+# functions
+cpr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
+} 
+mvr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
+}
