@@ -1,0 +1,34 @@
+# aliases
+# xbps quality of life 
+alias xi="sudo xbps-install -S"
+alias xr="sudo xbps-remove"
+alias xq="xbps-query -Rs"
+
+# normal aliases
+alias ls='ls --color=auto'
+alias setmon=/home/coal/.local/bin/set-monitor.sh
+alias vim=nvim
+alias ranger=$HOME/git/ranger/ranger.py
+alias k=kubectl
+
+# dotfiles command
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# everyday quick editing and sourcing
+alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
+alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
+alias sf="source $HOME/.config/fish/config.fish && echo $HOME/.config/fish/config.fish sourced"
+alias ee="$EDITOR $HOME/.env"
+alias eew="$EDITOR $HOME/.env_wayland"
+alias ef="$EDITOR $HOME/.config/fish/config.fish"
+alias eb="$EDITOR $HOME/.bashrc"
+alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
+alias ehp="$EDITOR $HOME/.config/hypr/hyprpaper.conf"
+
+# functions
+cpr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
+} 
+mvr() {
+  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
+}
