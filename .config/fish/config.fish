@@ -5,17 +5,17 @@ end
 source $HOME/.env
 source $HOME/.aliases
 
-wal -Rq
+# wal -Rq
 
 fish_add_path $HOME/scripts/
 
-set -gx PATH $PATH $HOME/.krew/bin
+# set -gx PATH $PATH $HOME/.krew/bin
 
-set -xg KUBECONFIG /home/coal/.kube/academy-config
+# set -xg KUBECONFIG /home/coal/.kube/academy-config
 
-if test $XDG_SESSION_TYPE = wayland
-    source $HOME/.env_wayland
-end
+# if test $XDG_SESSION_TYPE = wayland
+#     source $HOME/.env_wayland
+# end
 
 # functions
 
@@ -70,7 +70,7 @@ end
 complete --command j --exclusive --arguments '(__jump_hint)'
 
 # greeting
-function fish_greeting
-    ufetch
-end
+# function fish_greeting
+#     ufetch
+# end
 
