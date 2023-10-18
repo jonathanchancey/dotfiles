@@ -1,8 +1,8 @@
 # aliases
 # xbps quality of life 
-alias xi="sudo xbps-install -S"
-alias xr="sudo xbps-remove"
-alias xq="xbps-query -Rs"
+alias xi="sudo apt update && sudo apt-get install"
+alias xr="sudo apt remove"
+alias xq="apt search"
 
 # normal aliases
 alias ls='ls --color=auto'
@@ -12,7 +12,7 @@ alias ranger=$HOME/git/ranger/ranger.py
 alias k=kubectl
 
 # dotfiles command
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/git/.dotfiles --work-tree=$HOME'
 
 # everyday quick editing and sourcing
 alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
@@ -24,6 +24,7 @@ alias ef="$EDITOR $HOME/.config/fish/config.fish"
 alias eb="$EDITOR $HOME/.bashrc"
 alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
 alias ehp="$EDITOR $HOME/.config/hypr/hyprpaper.conf"
+alias en="$EDITOR $HOME/.config/nvim"
 
 # functions
 cpr() {
