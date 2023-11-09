@@ -5,17 +5,18 @@ end
 source $HOME/.env
 source $HOME/.aliases
 
-wal -Rq
+# wal -Rq
 
 fish_add_path $HOME/scripts/
 
-set -gx PATH $PATH $HOME/.krew/bin
+# set -gx PATH $PATH $HOME/.krew/bin
 
-set -xg KUBECONFIG /home/coal/.kube/academy-config
+# set -xg KUBECONFIG /home/coal/.kube/academy-config
 
-if test $XDG_SESSION_TYPE = wayland
-    source $HOME/.env_wayland
-end
+# TODO make sure variables exists
+#if test $XDG_SESSION_TYPE = wayland
+#    source $HOME/.env_wayland
+#end
 
 # functions
 
@@ -50,6 +51,7 @@ if type -q theme.sh
 	alias thd='theme.sh --dark -i'
 end
 
+fish_config theme choose "Rosé Pine Moon"
 
 # jump
 function __jump_add --on-variable PWD

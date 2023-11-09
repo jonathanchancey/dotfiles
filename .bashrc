@@ -3,13 +3,17 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
-export TERM=linux
-export PATH="$PATH:/home/void/.local/bin:/home/coal/git/libliftoff-gitlab/build"
 
 source ~/.env
 source ~/.aliases
 
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias config='/usr/bin/git --git-dir=$HOME/git/.dotfiles --work-tree=$HOME'
+
+# restore and checkout a file from remote
+# you'll run this 10+ times
+rescheck() {
+  config restore --staged "$@"
+  config checkout --theirs "$@"
+}

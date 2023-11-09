@@ -8,11 +8,11 @@ alias xq="xbps-query -Rs"
 alias ls='ls --color=auto'
 alias setmon=/home/coal/.local/bin/set-monitor.sh
 alias vim=nvim
-alias ranger=$HOME/git/ranger/ranger.py
+alias ranger=$HOME/apps/ranger/ranger.py
 alias k=kubectl
 
 # dotfiles command
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/git/.dotfiles --work-tree=$HOME'
 
 # everyday quick editing and sourcing
 alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
@@ -25,10 +25,3 @@ alias eb="$EDITOR $HOME/.bashrc"
 alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
 alias ehp="$EDITOR $HOME/.config/hypr/hyprpaper.conf"
 
-# functions
-cpr() {
-  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
-} 
-mvr() {
-  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
-}
