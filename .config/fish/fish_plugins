@@ -1,6 +1,5 @@
 jorgebucaran/fisher
-jorgebucaran/nvm.fish
-oh-my-fish/plugin-bang-bang
+pure-fish/pure
+catppuccin/fish
 patrickf1/fzf.fish
-ilancosman/tide
-rose-pine/fish
+oh-my-fish/plugin-bang-bang

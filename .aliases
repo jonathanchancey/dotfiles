@@ -19,9 +19,10 @@ alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
 alias sf="source $HOME/.config/fish/config.fish && echo $HOME/.config/fish/config.fish sourced"
 alias ee="$EDITOR $HOME/.env"
-alias eew="$EDITOR $HOME/.env_wayland"
-alias ef="$EDITOR $HOME/.config/fish/config.fish"
+alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
 alias eb="$EDITOR $HOME/.bashrc"
-alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
-alias ehp="$EDITOR $HOME/.config/hypr/hyprpaper.conf"
+alias ed="$EDITOR $HOME/git/dwm/config.h"
+alias sd="cd ~/git/dwm/ && make && sudo make install && cd -"
+
+alias rm="trash-put"
 
