@@ -2,8 +2,10 @@
 #ec xterm -geometry 80x66+0+0 -name login
 # exec /home/new/scripts/launch-dwm.sh
 # exec dwm
+screenconfig.sh &
 syncthing &
-nitrogen --restore &
 pipewire &
+nitrogen --restore &
+dwmblocks &
 while type dwm >/dev/null ; do dbus-run-session dwm && continue || break ; done
-
+# dwm >> /home/new/apps/dwm/dwm.log 2>&1

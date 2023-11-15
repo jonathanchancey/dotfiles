@@ -21,8 +21,8 @@ alias sf="source $HOME/.config/fish/config.fish && echo $HOME/.config/fish/confi
 alias ee="$EDITOR $HOME/.env"
 alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
 alias eb="$EDITOR $HOME/.bashrc"
-alias ed="$EDITOR $HOME/git/dwm/config.h"
-alias sd="cd ~/git/dwm/ && make && sudo make install && cd -"
+alias ed="$EDITOR $HOME/apps/dwm/config.h"
+alias sd="cd ~/apps/dwm/ && make && sudo make install && cd -"
 
 alias rm="trash-put"
 
