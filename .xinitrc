@@ -6,6 +6,7 @@ screenconfig.sh &
 syncthing &
 pipewire &
 nitrogen --restore &
+dunst &
 dwmblocks &
 while type dwm >/dev/null ; do dbus-run-session dwm && continue || break ; done
 # dwm >> /home/new/apps/dwm/dwm.log 2>&1
