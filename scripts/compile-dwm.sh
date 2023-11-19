@@ -1,2 +1,2 @@
 #!/bin/bash
-cd ~/git/dwm && make && sudo make install && cd -
+cd ~/apps/dwm && make && sudo make install && cd -

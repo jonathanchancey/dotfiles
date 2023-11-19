@@ -2,6 +2,7 @@
 #ec xterm -geometry 80x66+0+0 -name login
 # exec /home/new/scripts/launch-dwm.sh
 # exec dwm
+hwclock --hctosys
 screenconfig.sh &
 syncthing &
 pipewire &
