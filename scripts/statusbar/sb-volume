@@ -4,7 +4,7 @@
 
 TERMINAL=kitty
 
-case $BLOCK_BUTTON in
+case $BUTTON in
 	1) setsid -w -f "$TERMINAL" -e pulsemixer; pkill -RTMIN+10 "${STATUSBAR:-dwmblocks}" ;;
 	2) wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle ;;
 	4) wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+ ;;
