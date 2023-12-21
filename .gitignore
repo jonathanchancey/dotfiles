@@ -38,3 +38,12 @@ git/
 .audacity-data/
 .config/syncthing/
 .config/obsidian/
+.bash_history
+.emacs
+.gnupg/
+.gtkrc-2.0
+.i18n
+.inputrc
+.log/
+.steampid
+Pictures/

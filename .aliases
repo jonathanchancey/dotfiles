@@ -6,9 +6,7 @@ alias xq="xbps-query -Rs"
 
 # normal aliases
 alias ls='ls --color=auto'
-alias setmon=/home/coal/.local/bin/set-monitor.sh
 alias vim=nvim
-alias ranger=$HOME/apps/ranger/ranger.py
 
 # kubernetes aliases
 alias k='kubectl'
@@ -48,10 +46,3 @@ alias patches="grep \"#define .* 1\" patches.h"
 
 alias rm="trash-put"
 
-# functions
-#cpr() {
-#  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
-#} 
-#mvr() {
-#  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
-#}
