@@ -1,8 +1,8 @@
 # aliases
 # xbps quality of life 
-alias xi="sudo xbps-install -S"
-alias xr="sudo xbps-remove"
-alias xq="xbps-query -Rs"
+alias xi="sudo zypper install"
+alias xr="sudo zypper remove"
+alias xq="zypper search"
 
 # normal aliases
 alias ls='ls --color=auto'
@@ -16,7 +16,6 @@ alias kd='kubectl delete -f'
 alias kak='kubectl apply -k'
 alias kex='kubectl exec -i -t'
 alias klon='kubectl logs -f'
-kcdebug() { kubectl run -i --rm --tty debug --image=busybox --restart=Never -- sh }
 alias drl="docker login"
 alias tf=terraform
 alias tg=terragrunt
@@ -41,8 +40,5 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias code='code-oss'
-
+# alias rm="trash-put"
 alias patches="grep \"#define .* 1\" patches.h"
-
-alias rm="trash-put"
-

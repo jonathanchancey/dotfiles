@@ -3,7 +3,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 source ~/.env
@@ -16,7 +15,7 @@ rescheck() {
   config checkout --theirs "$@"
 }
 
- functions
+# functions
 cpr() {
   rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
 } 
