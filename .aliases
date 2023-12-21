@@ -47,3 +47,11 @@ alias code='code-oss'
 alias patches="grep \"#define .* 1\" patches.h"
 
 alias rm="trash-put"
+
+# functions
+#cpr() {
+#  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 "$@"
+#} 
+#mvr() {
+#  rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files "$@"
+#}
