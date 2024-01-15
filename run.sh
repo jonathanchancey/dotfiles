@@ -8,6 +8,8 @@ if [ -e "/etc/debian_version" ]; then
     chmod +x /usr/local/bin/ufetch
 fi
 
+update-alternatives --set editor /usr/bin/nvim
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
