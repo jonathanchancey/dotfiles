@@ -4,8 +4,8 @@ apt-get update
 apt-get install neovim ranger curl wget
 
 if [ -e "/etc/debian_version" ]; then
-    sudo sh -c 'curl https://gitlab.com/jschx/ufetch/-/raw/main/ufetch-debian > /usr/local/bin/ufetch'
-    sudo sh -c 'chmod +x /usr/local/bin/ufetch'
+    curl https://gitlab.com/jschx/ufetch/-/raw/main/ufetch-debian > /usr/local/bin/ufetch
+    chmod +x /usr/local/bin/ufetch
 fi
 
 alias ls='ls --color=auto'
