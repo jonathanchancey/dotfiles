@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install neovim ranger curl wget -y
+apt-get install neovim ranger curl wget tmux net-tools btop -y
 
 if [ -e "/etc/debian_version" ]; then
     curl https://gitlab.com/jschx/ufetch/-/raw/main/ufetch-debian > /usr/local/bin/ufetch
