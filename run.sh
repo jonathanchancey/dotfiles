@@ -48,7 +48,7 @@ alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
 alias eb="$EDITOR $HOME/.bashrc"
 alias l='ls -lh'
 alias la='ls -lah'
-alias la='ls -lah'
+alias lah='ls -lah'
 alias lan='ls -lanh'
 alias rm="trash-put"
 
