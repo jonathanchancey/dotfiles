@@ -4,16 +4,16 @@
 # Format is XDG_xxx_DIR="$HOME/yyy", where yyy is a shell-escaped
 # homedir-relative path, or XDG_xxx_DIR="/yyy", where /yyy is an
 # absolute path. No other format is supported.
+# 
 XDG_CONFIG_DIR="$HOME/.config/"
 XDG_CACHE_DIR="$HOME/.local/cache/"
 XDG_DATA_DIR="$HOME/.local/share/"
 XDG_STATE_DIR="$HOME/.local/state/"
-XKB_DEFAULT_LAYOUT=us
 XDG_DESKTOP_DIR="$HOME/desktop/"
-XDG_DOWNLOAD_DIR="$HOME/downloads/"
-XDG_TEMPLATES_DIR="$HOME/documents/templates/"
-XDG_PUBLICSHARE_DIR="$HOME/documents/public/"
-XDG_DOCUMENTS_DIR="$HOME/documents/"
-XDG_MUSIC_DIR="$HOME/media/music/"
-XDG_PICTURES_DIR="$HOME/pictures/"
-XDG_VIDEOS_DIR="$HOME/media/videos/"
+XDG_DOWNLOAD_DIR="$HOME/"
+XDG_TEMPLATES_DIR="$HOME/"
+XDG_PUBLICSHARE_DIR="$HOME/"
+XDG_DOCUMENTS_DIR="$HOME/"
+XDG_MUSIC_DIR="$HOME/"
+XDG_PICTURES_DIR="$HOME/"
+XDG_VIDEOS_DIR="$HOME/"

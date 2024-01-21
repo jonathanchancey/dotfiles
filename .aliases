@@ -7,6 +7,7 @@ alias xq="zypper search"
 # normal aliases
 alias ls='ls --color=auto'
 alias vim=nvim
+alias s="kitten ssh"
 
 # kubernetes aliases
 alias k='kubectl'
@@ -39,6 +40,6 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias code='code-oss'
+alias code='code'
 # alias rm="trash-put"
 alias patches="grep \"#define .* 1\" patches.h"
