@@ -6,7 +6,7 @@
 PS1='[\u@\h \W]\$ '
 
 test -s ~/.env && . ~/.env || true
-test -s ~/.alias && . ~/.alias || true
+test -s ~/.aliases && . ~/.aliases || true
 
 # restore and checkout a file from remote
 # you'll run this 10+ times
