@@ -3,7 +3,6 @@
 # exec /home/new/scripts/launch-dwm.sh
 # exec dwm
 screenconfig.sh &
-syncthing &
 pipewire &
 nitrogen --restore &
 dunst &

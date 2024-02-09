@@ -269,6 +269,16 @@ RUN \
     xkeyboard-config && \
     xbps-remove -oO
 
+
+RUN \
+    xbps-install -Sy \
+    fish-shell \
+    coreutils \
+    neovim \
+    kitty \
+    tmux \
+    curl
+
 RUN \
   useradd \
     -u 1000 -U \
@@ -280,9 +290,6 @@ RUN \
   chown 1000:1000 /home/void && \
   mkdir -p /var/run/pulse && \
   chown 1000:root /var/run/pulse && \
-  echo "abc:abc" | chpasswd && \
-  usermod -s /bin/bash abc && \
-  echo 'abc ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/abc && \
   echo 'void ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/void && \
   echo "allowed_users=anybody" > /etc/X11/Xwrapper.config && \
   ln -s /usr/local/share/kasmvnc /usr/share/kasmvnc && \
@@ -308,28 +315,19 @@ RUN \
   /usr/local/bin/dind -L \
     https://raw.githubusercontent.com/moby/moby/master/hack/dind && \
   chmod +x /usr/local/bin/dind && \
-  usermod -aG docker abc && \
+  usermod -aG docker void && \
   echo "**** configure locale and nginx ****" && \
-  for LOCALE in $(curl -sL https://raw.githubusercontent.com/thelamer/lang-stash/master/langs); do \
-    localedef -i $LOCALE -f UTF-8 $LOCALE.UTF-8; \
-  done && \
   sed -i '$d' /etc/nginx/nginx.conf && \
   echo "include /etc/nginx/conf.d/*;}" >> /etc/nginx/nginx.conf && \
   mkdir -p /etc/nginx/conf.d && \
   echo "**** cleanup ****" && \
   rm -rf /tmp/*
 
-
-RUN \
-    xbps-install -Sy neovim kitty tmux fish-shell
-
-RUN \
-    xbps-install -Sy \
-    bash \
-    coreutils
-
 COPY ./.config /home/void/
 COPY ./.local /home/void/
 COPY ./scripts /home/void/
+
+COPY ./.aliases /home/void/
+COPY ./.env /home/void/
 
 EXPOSE 3000
