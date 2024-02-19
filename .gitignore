@@ -47,3 +47,5 @@ git/
 .log/
 .steampid
 Pictures/
+.config/k9s/
+.viminfo
