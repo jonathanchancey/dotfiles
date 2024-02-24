@@ -18,6 +18,7 @@ nodes to move/
 applications/
 .local/
 git/
+!roles/git/
 .vscode-oss/
 .steam/
 .npm/
