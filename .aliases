@@ -3,7 +3,7 @@
 alias xi="sudo zypper install"
 alias xr="sudo zypper remove"
 alias xdu="sudo zypper dup"
-alias xq="zypper search"
+# alias xq="zypper search"
 
 # normal aliases
 alias ls='ls --color=auto'
