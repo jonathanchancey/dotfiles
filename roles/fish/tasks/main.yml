@@ -3,3 +3,9 @@
   ansible.builtin.import_tasks: suse.yml
   when: ansible_os_family == 'Suse'
   become: true
+
+- name: "Fish | Set default terminal"
+  user:
+    name: "{{ host_user }}"
+    shell: /usr/bin/fish
+  become: true

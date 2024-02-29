@@ -2,6 +2,7 @@
 # xbps quality of life 
 alias xi="sudo zypper install"
 alias xr="sudo zypper remove"
+alias xdu="sudo zypper dup"
 alias xq="zypper search"
 
 # normal aliases
@@ -18,7 +19,7 @@ alias kak='kubectl apply -k'
 alias kex='kubectl exec -i -t'
 alias klon='kubectl logs -f'
 alias drl="docker login"
-alias tf=terraform
+alias tf=tofu
 alias tg=terragrunt
 
 # dotfiles command

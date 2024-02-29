@@ -4,7 +4,7 @@
 
 ## Some Quick Essentials
 ```bash
-xi nvim ranger net-tools-deprecated openssh bind-utils
+xi neovim ranger net-tools-deprecated openssh bind-utils
 ```
 
 
@@ -21,3 +21,5 @@ ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/v
 
 cat myfile.conf | ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/vault.secret --stdin-name "myfile"
 ```
+
+Uses the Ansible dotfiles strategy from [TechDufus](https://github.com/TechDufus/dotfiles/)

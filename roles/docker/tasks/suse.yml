@@ -1,0 +1,6 @@
+---
+- name: "Docker | Install"
+  community.general.zypper:
+    name:
+      - docker
+    state: latest

@@ -1,0 +1,6 @@
+---
+- name: "Fish | Install"
+  community.general.zypper:
+    name:
+      - fish
+    state: latest

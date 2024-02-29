@@ -1,0 +1,7 @@
+---
+- name: "Opentofu | Install"
+  become: yes
+  community.general.zypper:
+    name:
+      - opentofu
+    state: latest
