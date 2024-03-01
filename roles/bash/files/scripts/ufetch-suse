@@ -77,7 +77,7 @@ cat <<EOF
 ${c0}      _______    ${nc}${USER}${ic}@${nc}${host}${reset} 
 ${c0}  -___|   __ \\   ${lc}OS:        ${ic}${os}${reset}  
 ${c0}         / ${c1}.${c0}\\ \\  ${lc}KERNEL:    ${ic}${kernel}${reset}
-${c0}         \\__/ ${c0}|  ${lc}Mem:    ${ic}${memory}${reset}  
+${c0}         \\__/ ${c0}|  ${lc}Mem:       ${ic}${memory}${reset}  
 ${c0}       _______|  ${lc}PACKAGES:  ${ic}${packages}${reset} 
 ${c0}       \\_______  ${lc}SHELL:     ${ic}${shell}${reset}  
 ${c0}  --__________/  ${lc}${uitype}:        ${ic}${ui}${reset} 
