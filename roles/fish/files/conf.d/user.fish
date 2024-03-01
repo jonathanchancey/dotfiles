@@ -14,8 +14,6 @@ function fish_greeting
 end
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-    fish_greeting
 
     # source files if they exist
     test -s ~/.env && source ~/.env || true

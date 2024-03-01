@@ -1,0 +1,12 @@
+---
+- name: "Amfora | Install"
+  community.general.zypper:
+    name:
+      - amfora
+    state: latest
+
+- name: "Amfora | Copy config"
+  ansible.builtin.copy:
+    src: ".config/amfora"
+    dest: "{{ ansible_user_dir }}/.config/amfora"
+    mode: "0644"

@@ -1,4 +1,4 @@
-# Minimal openSUSE Tumbleweed dotfiles
+# dotfiles
 
 ![](https://github.com/jonathanchancey/assets/blob/main/images/suse-wsl.png)
 
@@ -26,7 +26,7 @@ Customize automation in the `roles/` folder. Take the `go` folder for example. I
 
 ## Ansible Vault
 
-Ansible Vault can be used to encrypt values in public repos. This requires a strong vault.secret. This is where I'm choosing to put mine.  
+Ansible Vault can be used to encrypt values in public repos. This requires a strong `vault.secret`. I'm choosing to place mine at `~/.config/ansible-vault/vault.secret`.
 
 ```bash
 mkdir ~/.config/ansible-vault
