@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This repo services as a personal project and as inspiration for others.
+This repo serves as a personal project and as inspiration for others.
 
 Please don't blindly execute code. 
 
