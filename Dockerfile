@@ -1,39 +1,43 @@
 FROM opensuse/tumbleweed
 
+# system upgrade and install ansible dependencies
 USER root
-
 RUN zypper ref && zypper dup --no-confirm
-
 RUN zypper install --no-confirm \
     git \
     ansible \
     python311 \
     python311-pip \ 
-    sudo
+    sudo \ 
+    openssh
 
+# add ansible-user for real-world permissions
 RUN useradd -m ansible-user
-
 USER ansible-user
 ENV HOME /home/ansible-user
 
+# get latest contents of dotfiles
 RUN mkdir $HOME/git
-
-# RUN git clone https://github.com/jonathanchancey/dotfiles $HOME/git/dotfiles
 COPY . $HOME/git/dotfiles
 WORKDIR $HOME/git/dotfiles
 RUN echo /.dockerenv
 RUN git config --global --add safe.directory '*'
-
-ENV USER ansible-user
-
 RUN git checkout eerie-fog
 
+# add ansible-user to sudoers
 USER root
-
+# used in ansible for setting sudoers correctly 
+ENV USER ansible-user 
+ENV ANSIBLE_LOCAL_TEMP /root/.ansible/tmp
 RUN ansible-playbook main.yml --tags system
 
-ENV USER ansible-user
+# fix home and tmp dir permissions
+RUN mkdir -p $HOME/.ansible/tmp && \
+    chown -R ansible-user:ansible-user $HOME
 
-RUN ansible-playbook main.yml
+# testing playbook
+USER ansible-user
+ENV ANSIBLE_LOCAL_TEMP $HOME/.ansible/tmp
+RUN ansible-playbook main.yml --tags fish
 
-ENTRYPOINT /bin/bash
+ENTRYPOINT /usr/bin/fish

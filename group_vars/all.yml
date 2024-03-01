@@ -1,12 +1,15 @@
 default_roles:
   - system
   - fish
-  - docker
-  # - fonts
-  # - fzf
+  - bash
+  # - docker
   - git
   - go
-  # - helm
+  - opentofu
+  - lsd
+  # - fonts
+  # - fzf
+  - kubernetes
   # - k8s
   # - k9s
   # - lazygit
@@ -14,7 +17,6 @@ default_roles:
   # - python
   # - rust
   # - ssh
-  - opentofu
   # - tldr
   # - tmux
 

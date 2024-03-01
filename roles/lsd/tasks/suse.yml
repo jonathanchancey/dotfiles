@@ -1,7 +1,7 @@
 ---
-- name: "Fish | Install"
+- name: "Lsd | Install"
+  become: yes
   community.general.zypper:
     name:
-      - fish
+      - lsd
     state: latest
-  become: yes

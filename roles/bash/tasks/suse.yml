@@ -1,7 +1,6 @@
 ---
-- name: "Fish | Install"
+- name: "Bash | Install"
   community.general.zypper:
     name:
-      - fish
+      - bash
     state: latest
-  become: yes

@@ -6,7 +6,6 @@ alias xdu="sudo zypper dup"
 # alias xq="zypper search"
 
 # normal aliases
-alias ls='ls --color=auto'
 alias vim=nvim
 alias s="kitten ssh"
 
@@ -24,6 +23,8 @@ alias tg=terragrunt
 
 # dotfiles command
 alias config='/usr/bin/git --git-dir=$HOME/git/.dotfiles --work-tree=$HOME'
+alias cdd='cd $HOME/git/dotfiles'
+alias ra='ansible-playbook main.yml'
 
 # everyday quick editing and sourcing
 alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
