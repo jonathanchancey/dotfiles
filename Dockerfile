@@ -35,9 +35,13 @@ RUN ansible-playbook main.yml --tags system
 RUN mkdir -p $HOME/.ansible/tmp && \
     chown -R ansible-user:ansible-user $HOME
 
-# testing playbook
+# solve image-specific dependency problem by replacing busybox-which
+RUN zypper install --no-confirm --force-resolution xdg-utils 
+
+# main playbook testing
 USER ansible-user
 ENV ANSIBLE_LOCAL_TEMP $HOME/.ansible/tmp
-RUN ansible-playbook main.yml --tags fish
+# RUN ansible-playbook main.yml --tags 'bash,neovim,ranger,fish'
+RUN ansible-playbook main.yml
 
 ENTRYPOINT /usr/bin/fish
