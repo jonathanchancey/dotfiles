@@ -6,31 +6,10 @@ default_roles:
   - git
   - go
   - opentofu
-  - lsd
-  # - fonts
-  # - fzf
-  - kubernetes
-  # - k8s
-  # - k9s
-  # - lazygit
-  # - neovim
-  # - python
-  # - rust
-  # - ssh
-  # - tldr
-  # - tmux
+  - utils
+  - k8s
+  - neovim
+  - tmux
 
 git_user_name: "jonathanchancey"
 git_user_email: "jonathan@chancey.dev"
-
-k8s:
-  package_versions:
-    default:
-      - name: kubectl
-      - name: kubelet
-      - name: kubeadm
-
-helm:
-  repos:
-    - name: traefik
-      url: https://helm.traefik.io/traefik

@@ -1,7 +1,6 @@
 ---
-- name: "Lsd | Install"
-  become: yes
+- name: "Neovim | Install"
   community.general.zypper:
     name:
-      - lsd
+      - neovim
     state: latest

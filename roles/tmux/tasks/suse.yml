@@ -1,0 +1,7 @@
+---
+- name: "Tmux | Install"
+  become: yes
+  community.general.zypper:
+    name:
+      - tmux
+    state: latest

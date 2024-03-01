@@ -1,0 +1,6 @@
+---
+- name: "Ranger | Install"
+  community.general.zypper:
+    name:
+      - ranger
+    state: latest

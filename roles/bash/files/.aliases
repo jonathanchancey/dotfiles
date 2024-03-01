@@ -37,7 +37,6 @@ alias ed="$EDITOR $HOME/apps/dwm/config.h"
 alias edb="$EDITOR $HOME/apps/dwm/dwmblocks/blocks.h"
 alias sd="cd ~/apps/dwm/ && make && sudo make install && cd -"
 alias sdb="cd ~/apps/dwm/dwmblocks && make && sudo make install && cd -"
-alias ls='lsd'
 alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
