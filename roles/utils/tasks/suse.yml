@@ -1,0 +1,15 @@
+---
+- name: "Utils | Install misc utilities"
+  become: yes
+  community.general.zypper:
+    name:
+      - lsd
+      - bottom
+      - lazygit
+      - tree-sitter
+      - fzf
+      - net-tools-deprecated
+      - bind-utils
+      - hostname
+      - inxi
+    state: latest

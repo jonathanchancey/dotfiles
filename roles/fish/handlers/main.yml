@@ -1,0 +1,5 @@
+---
+- name: Fish | Cleanup fisher install script
+  ansible.builtin.file:
+    path: /{{ ansible_user_dir }}/fisher.fish
+    state: absent

@@ -1,43 +1,47 @@
-# dotfiles
-dots for my current systems
+# Minimal openSUSE Tumbleweed dotfiles
 
-## Management 
-https://news.ycombinator.com/item?id=11071754
+![](https://github.com/jonathanchancey/assets/blob/main/images/suse-wsl.png)
 
-https://www.atlassian.com/git/tutorials/dotfiles
+## Introduction
 
-## Adding a new system 
+This repo services as a personal project and as inspiration for others.
 
-in this example you are me
+Please don't blindly execute code. 
 
-start by creating a git folder and cloning a bare repo
+## Docker 
+
+You can use Docker to ~~blindly execute code~~ rapidly draft Ansible config. 
+
+Testing can be as simple as:
 
 ```bash
-
-mkdir $HOME/git
-
-git clone --bare https://github.com/jonathanchancey/dotfiles $HOME/git/.dotfiles
-
+docker build . -t dotfiles && docker run -it dotfiles
 ```
 
-add this to your `~/.bashrc`
+## Ansible 
+
+Enable/disable roles in `group_vars/all.yml`
+
+Customize automation in the `roles/` folder. Take the `go` folder for example. In `./roles/go/tasks/` there is `main.yml` which will always run if present in `all.yml`, and `suse.yml` which will run only on distros in the Suse family. 
+
+## Ansible Vault
+
+Ansible Vault can be used to encrypt values in public repos. This requires a strong vault.secret. This is where I'm choosing to put mine.  
+
 ```bash
-alias config='/usr/bin/git --git-dir=$HOME/git/.dotfiles --work-tree=$HOME'
-
-rescheck() {
-  config restore --staged "$@"
-  config checkout --theirs "$@"
-} 
+mkdir ~/.config/ansible-vault
+vim ~/.config/ansible-vault/vault.secret
+chmod 600 ~/.config/ansible-vault/vault.secret
 ```
 
-check `config status` after each command
+To then encrypt values with your vault password use the following:
 
-reconcile differents by restoring remote files with `rescheck FILEPATH` 
+```bash
+ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/vault.secret "mynewsecret" --name "MY_SECRET_VAR"
 
-stage and commit your changes with `config add FILENAME` `config commit -m "init commit"`
+cat myfile.conf | ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/vault.secret --stdin-name "myfile"
+```
 
-and create a new branch on remote with `config push -u origin user-host`
+## Credits
 
-finish off with `config config --local status.showUntrackedFiles no`
-
-and you should be all set 
+Uses the Ansible dotfiles strategy from [TechDufus](https://github.com/TechDufus/dotfiles/)

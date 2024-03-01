@@ -1,0 +1,6 @@
+---
+- name: "Neovim | Install"
+  community.general.zypper:
+    name:
+      - neovim
+    state: latest

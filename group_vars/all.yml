@@ -1,0 +1,15 @@
+default_roles:
+  - system
+  - fish
+  - bash
+  # - docker
+  - git
+  - go
+  - opentofu
+  - utils
+  - k8s
+  - neovim
+  - tmux
+
+git_user_name: "jonathanchancey"
+git_user_email: "jonathan@chancey.dev"

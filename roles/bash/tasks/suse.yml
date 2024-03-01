@@ -1,0 +1,22 @@
+---
+- name: "Bash | Install"
+  community.general.zypper:
+    name:
+      - bash
+    state: latest
+
+- name: Ensure directory exists
+  file:
+    path: "{{ ansible_user_dir }}/scripts"
+    state: directory
+    mode: '0755'
+    owner: '{{ ansible_env.USER}}'
+    group: '{{ ansible_env.USER}}'
+
+- name: "Bash | Copy ufetch-suse"
+  ansible.builtin.copy:
+    src: "scripts/ufetch-suse"
+    dest: "{{ ansible_user_dir }}/scripts/ufetch"
+    mode: "0555"
+    owner: '{{ ansible_env.USER}}'
+    group: '{{ ansible_env.USER}}'
