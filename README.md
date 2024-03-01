@@ -1,4 +1,4 @@
-# Minimal openSUSE Tumbleweed dotfiles
+# dotfiles
 
 ![](https://github.com/jonathanchancey/assets/blob/main/images/suse-wsl.png)
 
