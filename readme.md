@@ -11,8 +11,7 @@ libxfont2
     mesa-libgl \
     noto-fonts \
     noto-fonts-emoji \
-        perl-datetime \
-
+    perl-datetime \
     perl-list-moreutils \
     perl-switch \
     perl-try-tiny \
