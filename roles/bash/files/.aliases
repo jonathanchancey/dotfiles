@@ -1,5 +1,5 @@
 # aliases
-# xbps quality of life 
+# xbps quality of life
 alias xi="sudo zypper install"
 alias xr="sudo zypper remove"
 alias xdu="sudo zypper dup"
@@ -8,6 +8,7 @@ alias xdu="sudo zypper dup"
 # normal aliases
 alias vim=nvim
 alias s="kitten ssh"
+alias notes="cd ~/notes && nvim ."
 
 # kubernetes aliases
 alias k='kubectl'
@@ -27,11 +28,12 @@ alias cdd='cd $HOME/git/dotfiles'
 alias ra='ansible-playbook main.yml'
 
 # everyday quick editing and sourcing
-alias hy=/home/coal/.local/bin/hyprland-wrapper.sh
+alias hy="$HOME/.local/bin/hyprland-wrapper.sh"
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
 alias sf="source $HOME/.config/fish/conf.d/user.fish && echo $HOME/.config/fish/conf.d/user.fish sourced"
 alias ee="$EDITOR $HOME/.env"
 alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
+alias eh="$EDITOR $HOME/.config/hypr/hyprland.conf"
 alias eb="$EDITOR $HOME/.bashrc"
 alias ed="$EDITOR $HOME/apps/dwm/config.h"
 alias edb="$EDITOR $HOME/apps/dwm/dwmblocks/blocks.h"

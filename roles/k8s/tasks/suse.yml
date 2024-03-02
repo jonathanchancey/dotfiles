@@ -2,7 +2,7 @@
 - name: "Kubernetes | Install"
   community.general.zypper:
     name:
-      - kubernetes1.29-client
+      - kubernetes1.28-client
       - helm
       - k9s
     state: latest

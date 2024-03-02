@@ -7,8 +7,8 @@ RUN zypper install --no-confirm \
     git \
     ansible \
     python311 \
-    python311-pip \ 
-    sudo \ 
+    python311-pip \
+    sudo \
     openssh
 
 # add ansible-user for real-world permissions
@@ -26,8 +26,8 @@ RUN git checkout eerie-fog
 
 # add ansible-user to sudoers
 USER root
-# used in ansible for setting sudoers correctly 
-ENV USER ansible-user 
+# used in ansible for setting sudoers correctly
+ENV USER ansible-user
 ENV ANSIBLE_LOCAL_TEMP /root/.ansible/tmp
 RUN ansible-playbook main.yml --tags system
 
@@ -36,7 +36,7 @@ RUN mkdir -p $HOME/.ansible/tmp && \
     chown -R ansible-user:ansible-user $HOME
 
 # solve image-specific dependency problem by replacing busybox-which
-RUN zypper install --no-confirm --force-resolution xdg-utils 
+RUN zypper install --no-confirm --force-resolution xdg-utils
 
 # main playbook testing
 USER ansible-user
