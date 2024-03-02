@@ -38,9 +38,9 @@
       ansible.builtin.script:
         cmd: /usr/bin/fish -c 'cat /{{ ansible_user_dir }}/fisher.fish | source && fisher install jorgebucaran/fisher'
 
-- name: "Fish | Install Hydro"
-  ansible.builtin.script:
-    cmd: /usr/bin/fish -c 'fisher install jorgebucaran/hydro'
+# - name: "Fish | Install Hydro"
+#   ansible.builtin.script:
+#     cmd: /usr/bin/fish -c 'fisher install jorgebucaran/hydro'
 
 - name: "Fish | Install bang-bang"
   ansible.builtin.script:

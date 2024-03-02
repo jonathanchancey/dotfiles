@@ -1,12 +1,12 @@
 fish_add_path $HOME/scripts/
- 
+
 function cpr
-    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 $argv                                   
+    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 $argv
 end
 
 function mvr
-    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv             
-end 
+    rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv
+end
 
 function fish_greeting
     # if ufetch is a known command, run it
@@ -21,7 +21,7 @@ if status is-interactive
 
     # alias lsd to ls if it exists
     type -q lsd; and alias ls='lsd'
-    
+
     # add kubectl aliases if they exist
     test -f ~/.config/kubectl_aliases.fish && source ~/.config/kubectl_aliases.fish
 end
