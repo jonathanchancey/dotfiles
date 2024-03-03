@@ -7,12 +7,13 @@ RUN zypper install --no-confirm \
     git \
     ansible \
     python311 \
-    python311-pip \ 
-    sudo \ 
+    python311-pip \
+    sudo \
     openssh
 
 # install gum
 RUN zypper install --no-confirm gum
+RUN zypper install --no-confirm vim
 
 # add insecure pass for testing
 RUN echo "root:testing" | chpasswd
@@ -23,6 +24,8 @@ ENV HOME /home/ansible-user
 RUN chown -R ansible-user:ansible-user $HOME
 USER ansible-user
 ENV USER ansible-user
+
+# for gum colors
 ENV TERM xterm-256color
 
 # get latest contents of dotfiles
@@ -34,7 +37,7 @@ RUN chown -R ansible-user:ansible-user $HOME
 USER ansible-user
 RUN echo /.dockerenv
 RUN git config --global --add safe.directory '*'
-RUN git checkout eerie-fog
+# RUN git checkout eerie-fog
 RUN chmod +x dotfiles.sh
 
 CMD $HOME/git/dotfiles/dotfiles.sh
