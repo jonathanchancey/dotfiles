@@ -85,22 +85,6 @@ print_env_check() {
 
 print_env_check
 
-# ask for vault secret
-if [ -n "$VAULT_SECRET_MISSING" ]; then
-    mkdir -p $VAULT_SECRET_DIR
-    gum input --placeholder "paste your secret here" --password > $VAULT_SECRET
-    chmod 600 $VAULT_SECRET
-    VAULT_SECRET_MISSING=""
-    print_env_check
-fi
-
-# fix vault secret perms
-if [ -n "$VAULT_SECRET_WRONG_PERMS" ]; then
-    chmod 600 $VAULT_SECRET
-    VAULT_SECRET_WRONG_PERMS=""
-    print_env_check
-fi
-
 # clone if repo missing
 if [ -n "$REPO_DIR_MISSING" ]; then
     # ask first
@@ -117,6 +101,22 @@ if [ -n "$REPO_DIR_MISSING" ]; then
         REPO_DIR_MISSING=""
     fi
 
+    print_env_check
+fi
+
+# ask for vault secret
+if [ -n "$VAULT_SECRET_MISSING" ]; then
+    mkdir -p $VAULT_SECRET_DIR
+    gum input --placeholder "paste your secret here" --password > $VAULT_SECRET
+    chmod 600 $VAULT_SECRET
+    VAULT_SECRET_MISSING=""
+    print_env_check
+fi
+
+# fix vault secret perms
+if [ -n "$VAULT_SECRET_WRONG_PERMS" ]; then
+    chmod 600 $VAULT_SECRET
+    VAULT_SECRET_WRONG_PERMS=""
     print_env_check
 fi
 
