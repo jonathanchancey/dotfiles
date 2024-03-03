@@ -6,11 +6,11 @@
 
 This repo serves as a personal project and as inspiration for others.
 
-Please don't blindly execute code. 
+Please don't blindly execute code.
 
-## Docker 
+## Docker
 
-You can use Docker to ~~blindly execute code~~ rapidly draft Ansible config. 
+You can use Docker to ~~blindly execute code~~ rapidly draft Ansible config.
 
 Testing can be as simple as:
 
@@ -18,11 +18,11 @@ Testing can be as simple as:
 docker build . -t dotfiles && docker run -it dotfiles
 ```
 
-## Ansible 
+## Ansible
 
 Enable/disable roles in `group_vars/all.yml`
 
-Customize automation in the `roles/` folder. Take the `go` folder for example. In `./roles/go/tasks/` there is `main.yml` which will always run if present in `all.yml`, and `suse.yml` which will run only on distros in the Suse family. 
+Customize automation in the `roles/` folder. Take the `go` folder for example. In `./roles/go/tasks/` there is `main.yml` which will always run if present in `all.yml`, and `suse.yml` which will run only on distros in the Suse family.
 
 ## Ansible Vault
 
