@@ -36,6 +36,10 @@ COPY . $HOME/git/dotfiles
 WORKDIR $HOME/git/dotfiles
 USER root
 RUN chown -R ansible-user:ansible-user $HOME
+
+# add ansible user to sudoers file for pipelines
+RUN echo "ansible-user ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansible-user > /dev/null
+
 USER ansible-user
 RUN echo /.dockerenv
 RUN git config --global --add safe.directory '*'
