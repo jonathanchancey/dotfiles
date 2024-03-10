@@ -36,11 +36,17 @@
     scope: global
     value: "{{ git_user_name }}"
 
-- name: "Git | Set user.name"
+- name: "Git | Set autocrlf to input"
   community.general.git_config:
-    name: core.autocrlf 
+    name: core.autocrlf
     scope: global
-    value: true
+    value: input
+
+- name: "Git | Set eol to lf"
+  community.general.git_config:
+    name: core.eol
+    scope: global
+    value: lf
 
 # - name: "Git | Set user.signingkey"
 #   community.general.git_config:
