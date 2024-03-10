@@ -41,5 +41,6 @@ RUN echo /.dockerenv
 RUN git config --global --add safe.directory '*'
 # RUN git checkout eerie-fog
 RUN chmod +x dotfiles.sh
+RUN chmod +x .github/scripts/prepare
 
 CMD $HOME/git/dotfiles/dotfiles.sh
