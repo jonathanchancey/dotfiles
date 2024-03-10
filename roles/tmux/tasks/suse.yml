@@ -1,6 +1,6 @@
 ---
 - name: "Tmux | Install"
-  become: yes
+   become: true
   community.general.zypper:
     name:
       - tmux

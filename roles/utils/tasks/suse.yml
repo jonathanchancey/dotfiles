@@ -1,6 +1,6 @@
 ---
 - name: "Utils | Install misc utilities"
-  become: yes
+   become: true
   community.general.zypper:
     name:
       - lsd

@@ -1,12 +1,6 @@
 ---
-- name: Set sudo
-  ansible.builtin.template:
-    src: user-sudo.j2
-    dest: "/etc/sudoers.d/{{ ansible_env['USER'] }}"
-    mode: 0644
-  become: true
 - name: "System | {{ ansible_distribution }} | Perform a dist-upgrade"
-  become: yes
+  become: true
   community.general.zypper:
     name: '*'
     state: dist-upgrade
