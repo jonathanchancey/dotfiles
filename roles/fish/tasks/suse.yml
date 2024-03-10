@@ -4,4 +4,4 @@
     name:
       - fish
     state: latest
-   become: true
+  become: true

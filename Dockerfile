@@ -11,9 +11,11 @@ RUN zypper install --no-confirm \
     sudo \
     openssh
 
-# install gum
-RUN zypper install --no-confirm gum
-RUN zypper install --no-confirm vim
+# install gum and vim
+RUN zypper install --no-confirm gum vim
+
+# # solve image-specific dependency problem by replacing busybox-which
+RUN zypper install --no-confirm --force-resolution xdg-utils
 
 # add insecure pass for testing
 RUN echo "root:testing" | chpasswd
@@ -41,28 +43,3 @@ RUN git config --global --add safe.directory '*'
 RUN chmod +x dotfiles.sh
 
 CMD $HOME/git/dotfiles/dotfiles.sh
-
-
-# disabled for testing gum
-# # add ansible-user to sudoers
-# USER root
-# # used in ansible for setting sudoers correctly
-
-# ENV ANSIBLE_LOCAL_TEMP /root/.ansible/tmp
-
-# RUN ansible-playbook main.yml --tags system
-
-# # fix home and tmp dir permissions
-# RUN mkdir -p $HOME/.ansible/tmp && \
-#     chown -R ansible-user:ansible-user $HOME
-
-# # solve image-specific dependency problem by replacing busybox-which
-# RUN zypper install --no-confirm --force-resolution xdg-utils
-
-# # main playbook testing
-# USER ansible-user
-# ENV ANSIBLE_LOCAL_TEMP $HOME/.ansible/tmp
-# # RUN ansible-playbook main.yml --tags 'bash,neovim,ranger,fish'
-# RUN ansible-playbook main.yml
-
-# ENTRYPOINT /usr/bin/fish

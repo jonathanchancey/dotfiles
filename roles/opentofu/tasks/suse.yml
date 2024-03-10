@@ -1,6 +1,6 @@
 ---
 - name: "Opentofu | Install"
-   become: true
+  become: true
   community.general.zypper:
     name:
       - opentofu
