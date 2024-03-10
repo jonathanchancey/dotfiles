@@ -44,15 +44,6 @@ print_env_check() {
     # print ansible version
     echo "ansible version: $(ansible-playbook --version | head -n1 | sed 's/.*\[\(.*\)\].*/\1/')"
 
-    # check if repo exists
-    if [ -d "$REPO_DIR" ]; then
-        echo "dotfiles repo: :white_check_mark:" | gum format -t emoji
-    else
-        # if not, ask to clone it later
-        echo "dotfiles repo: :x:" | gum format -t emoji
-        export REPO_DIR_MISSING=true
-    fi
-
     # check if vault secret file exists with correct perms
     if [ -s "$VAULT_SECRET" ]; then
         # if exists, continue
@@ -67,8 +58,25 @@ print_env_check() {
         export VAULT_SECRET_MISSING=true
     fi
 
+    # check if repo exists
+    if [ -d "$REPO_DIR" ]; then
+        echo "dotfiles repo: :white_check_mark:" | gum format -t emoji
+    else
+        # if not, ask to clone it later
+        echo "dotfiles repo: :x:" | gum format -t emoji
+        export REPO_DIR_MISSING=true
+    fi
+
+    # check if non-interactive sudo succeeds
+    if sudo -n true 2>/dev/null; then
+        echo "sudo permissions: :white_check_mark:" | gum format -t emoji
+    else
+        echo "sudo permissions: :x: (cannot run without password)" | gum format -t emoji
+        export SUDO_PERMISSIONS_MISSING=true
+    fi
+
     # ready to proceed
-    if [ -z "$VAULT_SECRET_MISSING" ] && [ -z "$REPO_DIR_MISSING" ] && [ -z "$VAULT_SECRET_WRONG_PERMS" ]; then
+    if [ -z "$VAULT_SECRET_MISSING" ] && [ -z "$REPO_DIR_MISSING" ] && [ -z "$VAULT_SECRET_WRONG_PERMS" ] &&  [ -z "$SUDO_PERMISSIONS_MISSING" ]; then
         echo '{{ Bold "ready to go!" }}' | gum format -t template
         YES="run ansible!"
         NO="wait cancel!"
@@ -120,3 +128,19 @@ if [ -n "$VAULT_SECRET_WRONG_PERMS" ]; then
     print_env_check
 fi
 
+# fix sudo perms
+if [ -n "$SUDO_PERMISSIONS_MISSING" ]; then
+    export DOTFILES_USER=$USER
+    echo "add NOPASSWD entry for $DOTFILES_USER to /etc/sudoers.d?"
+    YES="Yes, please!"
+    NO="No, thank you!"
+    CHOICE=$(gum choose "$YES" "$NO")
+
+    # if yes, add sudoers.d file
+    if [ "$CHOICE" == "$YES" ]; then
+        echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$DOTFILES_USER > /dev/null
+        SUDO_PERMISSIONS_MISSING=""
+    fi
+
+    print_env_check
+fi
