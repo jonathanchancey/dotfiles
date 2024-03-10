@@ -1,0 +1,7 @@
+#!/bin/sh
+# perform minimal preparation and run ansible
+echo placeholder > $VAULT_SECRET
+chmod 600 $VAULT_SECRET
+export DOTFILES_USER=$USER
+echo "$USER ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/$DOTFILES_USER > /dev/null
+ansible-playbook main.yml
