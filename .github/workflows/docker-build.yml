@@ -11,13 +11,10 @@ on:
 jobs:
   build-and-run:
     runs-on: ubuntu-latest
-
     steps:
     - name: Check out code
       uses: actions/checkout@v2
-
     - name: Build Docker image
       run: docker build -t dotfiles .
-
     - name: Run Docker container
       run: docker run --rm dotfiles .github/scripts/prepare
