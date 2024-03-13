@@ -51,3 +51,4 @@
     src: "conf.d/user.fish"
     dest: "{{ ansible_user_dir }}/.config/fish/conf.d/user.fish"
     mode: "0644"
+    backup: yes

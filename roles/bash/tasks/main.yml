@@ -9,21 +9,25 @@
     src: ".aliases"
     dest: "{{ ansible_user_dir }}/.aliases"
     mode: "0644"
+    backup: yes
 
 - name: "Bash | Copy .env"
   ansible.builtin.copy:
     src: ".env"
     dest: "{{ ansible_user_dir }}/.env"
     mode: "0644"
+    backup: yes
 
 - name: "Bash | Copy .env_wayland"
   ansible.builtin.copy:
     src: ".env_wayland"
     dest: "{{ ansible_user_dir }}/.env_wayland"
     mode: "0644"
+    backup: yes
 
 - name: "Bash | Copy .bashrc"
   ansible.builtin.copy:
     src: ".bashrc"
     dest: "{{ ansible_user_dir }}/.bashrc"
     mode: "0644"
+    backup: yes
