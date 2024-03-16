@@ -31,6 +31,11 @@ RUN echo "ansible-user ALL=(ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/ansibl
 USER ansible-user
 ENV USER ansible-user
 
+# copy repo
+RUN mkdir $HOME/git
+COPY . $HOME/git/dotfiles
+WORKDIR $HOME/git/dotfiles
+
 # for gum colors
 ENV TERM xterm-256color
 
@@ -38,4 +43,4 @@ ENV TERM xterm-256color
 RUN chmod +x dotfiles.sh
 RUN chmod +x .github/scripts/prepare
 
-CMD $HOME/git/dotfiles/dotfiles.sh
+CMD ansible-playbook main.yml
