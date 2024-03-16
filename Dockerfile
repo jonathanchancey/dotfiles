@@ -40,7 +40,7 @@ WORKDIR $HOME/git/dotfiles
 ENV TERM xterm-256color
 
 # RUN git checkout eerie-fog
-RUN chmod +x dotfiles.sh
-RUN chmod +x .github/scripts/prepare
+RUN sudo chmod +x dotfiles.sh
+RUN sudo chmod +x .github/scripts/prepare
 
 CMD ansible-playbook main.yml
