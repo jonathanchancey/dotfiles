@@ -39,8 +39,6 @@ WORKDIR $HOME/git/dotfiles
 # for gum colors
 ENV TERM xterm-256color
 
-# ensure scripts are executable
-RUN sudo chmod +x dotfiles.sh
-RUN sudo chmod +x .github/scripts/prepare
+RUN ansible-playbook main.yml
 
-CMD ansible-playbook main.yml
+CMD /usr/local/bin
