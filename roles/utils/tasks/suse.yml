@@ -12,4 +12,5 @@
       - bind-utils
       - hostname
       - inxi
+      - lsb-release
     state: latest
