@@ -22,6 +22,7 @@
     force: true
 
 - name: Tmux | Ensure directory exists
+  become: true
   file:
     path: "/run/tmux/1000"
     state: directory
