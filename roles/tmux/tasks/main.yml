@@ -22,12 +22,9 @@
     force: true
 
 - name: Tmux | Ensure directory exists
-  become: yes
-  tasks:
-    - name: Create tmux directory
-      file:
-        path: "/run/tmux/1000"
-        state: directory
-        owner: ansible-user
-        group: ansible-user
-        mode: '0700'
+  file:
+    path: "/run/tmux/1000"
+    state: directory
+    owner: ansible-user
+    group: ansible-user
+    mode: '0700'
