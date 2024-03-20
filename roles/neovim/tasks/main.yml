@@ -3,3 +3,17 @@
   ansible.builtin.import_tasks: suse.yml
   when: ansible_os_family == 'Suse'
   become: true
+
+- name: Neovim | Ensure directory exists
+  become: true
+  file:
+    path: "{{ ansible_user_dir }}/nvim/"
+    state: directory
+
+- name: "Neovim | Configure"
+  ansible.builtin.copy:
+    src: init.lua
+    dest: "{{ ansible_user_dir }}/nvim/init.lua"
+    mode: "0644"
+    directory_mode: "0755"
+    force: true
