@@ -4,4 +4,7 @@
   community.general.zypper:
     name:
       - tmux
+      - fzf
+      - fzf-tmux
+      - bat
     state: latest
