@@ -41,4 +41,4 @@ ENV TERM xterm-256color
 
 RUN ansible-playbook main.yml
 
-CMD /usr/local/bin
+CMD /bin/fish
