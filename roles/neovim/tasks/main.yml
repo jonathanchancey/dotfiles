@@ -5,7 +5,6 @@
   become: true
 
 - name: Neovim | Ensure directory exists
-  become: true
   file:
     path: "{{ ansible_user_dir }}/.config/nvim/"
     state: directory
