@@ -45,3 +45,4 @@ cat myfile.conf | ansible-vault encrypt_string --vault-password-file $HOME/.conf
 ## Credits
 
 Uses the Ansible dotfiles strategy from [TechDufus](https://github.com/TechDufus/dotfiles/)
+

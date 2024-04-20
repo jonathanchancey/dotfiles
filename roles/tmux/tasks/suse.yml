@@ -8,3 +8,12 @@
       - fzf-tmux
       - bat
     state: latest
+
+- name: Tmux | Ensure directory exists
+  become: true
+  file:
+    path: "/run/tmux/1000"
+    state: directory
+    owner: ansible-user
+    group: ansible-user
+    mode: '0700'

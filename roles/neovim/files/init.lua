@@ -10,7 +10,6 @@
 --  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
-
 vim.opt.conceallevel = 2
 
 -- [[ Install `lazy.nvim` plugin manager ]]
