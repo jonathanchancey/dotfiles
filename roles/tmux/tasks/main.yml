@@ -9,7 +9,7 @@
     repo: https://github.com/tmux-plugins/tpm
     dest: ~/.tmux/plugins/tpm
 
-- name: "Tmux | Configure"
+- name: "Tmux | Link"
   ansible.builtin.file:
     src: "{{ role_path }}/files/.tmux.conf"
     dest: "{{ ansible_user_dir }}/.tmux.conf"

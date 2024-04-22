@@ -8,9 +8,10 @@ default_roles:
   # - opentofu
   # - utils
   # - k8s
+  # - amfora
   - neovim
   - tmux
-  # - amfora
+  - zsh
 
 git_user_name: "jchancey"
 git_user_email: "jchancey@oneinc.com"

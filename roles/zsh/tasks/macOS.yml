@@ -1,0 +1,23 @@
+---
+- name: "Zsh | Install"
+  community.general.homebrew:
+    name:
+      - zsh
+    state: latest
+  become: true
+
+- name: Ensure directory exists
+  file:
+    path: "{{ ansible_user_dir }}/scripts"
+    state: directory
+    mode: '0755'
+    owner: '{{ ansible_env.USER}}'
+    group: '{{ ansible_env.USER}}'
+
+- name: "Bash | Copy ufetch-osx"
+  ansible.builtin.copy:
+    src: "scripts/ufetch-osx"
+    dest: "{{ ansible_user_dir }}/scripts/ufetch"
+    mode: "0555"
+    owner: '{{ ansible_env.USER}}'
+    group: '{{ ansible_env.USER}}'
