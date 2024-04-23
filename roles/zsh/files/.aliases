@@ -8,6 +8,9 @@ alias xq="brew search"
 
 # normal aliases
 alias vim=nvim
+alias v='nvim .'
+alias t='tmux'
+alias notes="cd $HOME/notes && nvim ."
 
 # kubernetes aliases
 alias k='kubectl'
@@ -23,7 +26,7 @@ alias tg=terragrunt
 
 # dotfiles command
 alias cdd='cd $HOME/git/dotfiles'
-alias dots='ansible-playbook main.yml'
+alias dots='ansible-playbook $HOME/git/dotfiles/main.yml'
 
 # everyday quick editing and sourcing
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
@@ -34,7 +37,7 @@ alias sf="source $HOME/.config/fish/conf.d/user.fish && echo $HOME/.config/fish/
 alias ee="$EDITOR $HOME/.env"
 alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
 alias eb="$EDITOR $HOME/.bashrc"
-alias ev="cd $HOME/.config/nvim && $EDITOR ."
+alias ev="cd $HOME/.config/nvim && $EDITOR init.lua"
 alias ed="cd $HOME/git/dotfiles && $EDITOR ."
 alias l='ls -l'
 alias la='ls -a'
