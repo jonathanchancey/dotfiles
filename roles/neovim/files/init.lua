@@ -81,7 +81,7 @@ require('lazy').setup({
   },
 
   -- Useful plugin to show you pending keybinds.
-  { 'folke/which-key.nvim', opts = {} },
+  { 'folke/which-key.nvim',  opts = {} },
   {
     -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
@@ -159,11 +159,11 @@ require('lazy').setup({
 
   {
     -- Theme
-    'sainnhe/everforest',
+    'shaunsingh/nord.nvim',
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'everforest'
-    end,
+    -- config = function()
+    --   vim.cmd.colorscheme 'nord'
+    -- end,
   },
 
   {
@@ -173,7 +173,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'everforest',
+        theme = 'nord',
         component_separators = '|',
         section_separators = '',
       },
@@ -237,20 +237,37 @@ require('lazy').setup({
     'sbdchd/neoformat',
   },
   {
-  "tadmccorkle/markdown.nvim",
-  ft = "markdown", -- or 'event = "VeryLazy"'
-  opts = {
-on_attach = function(bufnr)
-  local function toggle(key)
-    return "<Esc>gv<Cmd>lua require'markdown.inline'"
-      .. ".toggle_emphasis_visual'" .. key .. "'<CR>"
-  end
+    'rebelot/kanagawa.nvim',
+    config = function()
+      vim.cmd.colorscheme 'nord'
+    end,
 
-  vim.keymap.set("x", "<C-b> <C-b>", toggle("b"), { buffer = bufnr })
-  vim.keymap.set("x", "<C-i>", toggle("i"), { buffer = bufnr })
-end,
-    -- configuration here or empty for defaults
   },
+  {
+    "tadmccorkle/markdown.nvim",
+    ft = "markdown", -- or 'event = "VeryLazy"'
+    opts = {
+      on_attach = function(bufnr)
+        local function toggle(key)
+          return "<Esc>gv<Cmd>lua require'markdown.inline'"
+              .. ".toggle_emphasis_visual'" .. key .. "'<CR>"
+        end
+
+        vim.keymap.set("x", "<C-b> <C-b>", toggle("b"), { buffer = bufnr })
+        vim.keymap.set("x", "<C-i>", toggle("i"), { buffer = bufnr })
+      end,
+      -- configuration here or empty for defaults
+    },
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+      "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    }
   }
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
@@ -270,6 +287,20 @@ end,
 -- [[ Setting options ]]
 -- See `:help vim.o`
 -- NOTE: You can change these options as you wish!
+
+-- Example config in lua
+
+-- -- Nord Theme
+-- vim.g.nord_contrast = true
+-- vim.g.nord_borders = false
+-- vim.g.nord_disable_background = false
+-- vim.g.nord_italic = false
+-- vim.g.nord_uniform_diff_background = true
+-- vim.g.nord_bold = false
+--
+-- -- Load the colorscheme
+-- require('nord').set()
+
 
 -- Set highlight on search
 vim.o.hlsearch = true
@@ -342,33 +373,33 @@ require('format-on-save').setup({
   format_on_save.setup({
     formatter_by_ft = {
       markdown = formatters.prettierd,
-  }
+    }
   })
 })
 
 -- require('neoformat').setup{}
 
--- check if WSL kernel
-local function isWSL()
-    local f = assert(io.popen("uname -a", "r"))
-    local s = assert(f:read("*a"))
-    f:close()
-    return s:match("WSL") ~= nil
-end
+-- -- check if WSL kernel
+-- local function isWSL()
+--   local f = assert(io.popen("uname -a", "r"))
+--   local s = assert(f:read("*a"))
+--   f:close()
+--   return s:match("WSL") ~= nil
+-- end
 
 -- if WSL use different path for notes
-local defaultNotesPath = "~/notes"
-local notesPath = isWSL() and "/mnt/c/Users/seki/notes" or defaultNotesPath
+-- local defaultNotesPath = "~/notes"
+-- local notesPath = isWSL() and "/mnt/c/Users/seki/notes" or defaultNotesPath
 
 require('obsidian').setup {
   workspaces = {
     {
       name = "personal",
-      path = notesPath,
+      path = "~/notes",
     },
   },
   daily_notes = {
-    folder = "20-29 areas/dairy/2024/",
+    folder = "dairy/",
   },
 }
 
@@ -459,7 +490,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'markdown', 'markdown_inline'},
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'markdown', 'markdown_inline' },
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
