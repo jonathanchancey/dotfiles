@@ -101,6 +101,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 eval "$(zoxide init zsh)"
+eval "$(fzf --zsh)"
+
+autoload -U promptinit; promptinit
+prompt pure
 
 test -s ~/.env && . ~/.env || true
 test -s ~/.aliases && . ~/.aliases || true
