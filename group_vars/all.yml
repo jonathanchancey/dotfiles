@@ -3,12 +3,12 @@ default_roles:
   # - fish
   # - bash
   # - docker
-  # - git
   # - go
   # - opentofu
   # - utils
   # - k8s
   # - amfora
+  - git
   - neovim
   - tmux
   - zsh
