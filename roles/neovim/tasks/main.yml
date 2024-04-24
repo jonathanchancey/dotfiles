@@ -12,8 +12,8 @@
 
 - name: "Neovim | Configure"
   ansible.builtin.file:
-    src: "{{ role_path }}/files/init.lua"
-    dest: "{{ ansible_user_dir }}/.config/nvim/init.lua"
+    src: "{{ role_path }}/files/nvim"
+    dest: "{{ ansible_user_dir }}/.config/nvim"
     state: link
     force: true
 

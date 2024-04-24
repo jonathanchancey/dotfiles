@@ -14,12 +14,12 @@
 #     owner: '{{ ansible_env.USER}}'
 #     group: '{{ ansible_env.USER}}'
  
-- name: "Zsh | Copy ufetch-osx"
-  ansible.builtin.file:
-    src: "{{ role_path }}/files/ufetch-macOS"
-    dest: "{{ ansible_user_dir }}/scripts/ufetch"
-    state: link
-    force: true
-    # mode: "0555"
-    # owner: '{{ ansible_env.USER}}'
+# - name: "Zsh | Copy ufetch-osx"
+#   ansible.builtin.file:
+#     src: "{{ role_path }}/files/ufetch-macOS"
+#     dest: "{{ ansible_user_dir }}/scripts/ufetch"
+#     state: link
+#     force: true
+#     # mode: "0555"
+#     # owner: '{{ ansible_env.USER}}'
 

@@ -156,15 +156,25 @@ require('lazy').setup({
       end,
     },
   },
-
   {
-    -- Theme
-    'nordtheme/vim',
+    "gbprod/nord.nvim",
+    lazy = false,
     priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'nord'
-    end,
+    -- config = function()
+    --   require("nord").setup({})
+    --   vim.cmd.colorscheme("nord")
+    -- end,
   },
+
+
+  -- {
+  --   -- Theme
+  --   'nordtheme/vim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'nord'
+  --   end,
+  -- },
 
   {
     -- Set lualine as statusline
@@ -239,7 +249,7 @@ require('lazy').setup({
   -- {
   --   'rebelot/kanagawa.nvim',
   --   config = function()
-  --     vim.cmd.colorscheme 'nord'
+  --     vim.cmd.colorscheme 'kanagawa'
   --   end,
   --
   -- },
@@ -339,6 +349,10 @@ require('leap').create_default_mappings()
 --
 -- -- Load the colorscheme
 -- require('nord').set()
+--
+
+vim.cmd.colorscheme("nord")
+
 
 
 -- Set highlight on search
