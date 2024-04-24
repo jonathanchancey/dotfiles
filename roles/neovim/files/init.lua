@@ -221,21 +221,21 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-  {
-    "epwalsh/obsidian.nvim",
-    version = "*",
-    lazy = true,
-    ft = "markdown",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-  },
-  {
-    "elentok/format-on-save.nvim",
-  },
-  {
-    'sbdchd/neoformat',
-  },
+   -- {
+   --   "epwalsh/obsidian.nvim",
+   --   version = "*",
+   --   lazy = true,
+   --   ft = "markdown",
+   --   dependencies = {
+   --     "nvim-lua/plenary.nvim",
+   --   },
+   -- },
+   {
+     "elentok/format-on-save.nvim",
+   },
+   {
+     'sbdchd/neoformat',
+   },
   {
     'rebelot/kanagawa.nvim',
     config = function()
@@ -243,31 +243,42 @@ require('lazy').setup({
     end,
 
   },
+  -- {
+  --   "tadmccorkle/markdown.nvim",
+  --   ft = "markdown", -- or 'event = "VeryLazy"'
+  --   opts = {
+  --     on_attach = function(bufnr)
+  --       local function toggle(key)
+  --         return "<Esc>gv<Cmd>lua require'markdown.inline'"
+  --             .. ".toggle_emphasis_visual'" .. key .. "'<CR>"
+  --       end
+  --
+  --       vim.keymap.set("x", "<C-b> <C-b>", toggle("b"), { buffer = bufnr })
+  --       vim.keymap.set("x", "<C-i>", toggle("i"), { buffer = bufnr })
+  --     end,
+  --     -- configuration here or empty for defaults
+  --   },
+  -- },
+  -- {
+  --   "nvim-neo-tree/neo-tree.nvim",
+  --   branch = "v3.x",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+  --     "MunifTanjim/nui.nvim",
+  --     "3rd/image.nvim",              -- Optional image support in preview window: See `# Preview Mode` for more information
+  --   }
+  -- },
   {
-    "tadmccorkle/markdown.nvim",
-    ft = "markdown", -- or 'event = "VeryLazy"'
-    opts = {
-      on_attach = function(bufnr)
-        local function toggle(key)
-          return "<Esc>gv<Cmd>lua require'markdown.inline'"
-              .. ".toggle_emphasis_visual'" .. key .. "'<CR>"
-        end
-
-        vim.keymap.set("x", "<C-b> <C-b>", toggle("b"), { buffer = bufnr })
-        vim.keymap.set("x", "<C-i>", toggle("i"), { buffer = bufnr })
-      end,
-      -- configuration here or empty for defaults
-    },
-  },
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-      "3rd/image.nvim",              -- Optional image support in preview window: See `# Preview Mode` for more information
-    }
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
   },
   {
     "christoomey/vim-tmux-navigator",
@@ -419,17 +430,17 @@ require('format-on-save').setup({
 -- local defaultNotesPath = "~/notes"
 -- local notesPath = isWSL() and "/mnt/c/Users/seki/notes" or defaultNotesPath
 
-require('obsidian').setup {
-  workspaces = {
-    {
-      name = "personal",
-      path = "~/notes",
-    },
-  },
-  daily_notes = {
-    folder = "dairy/",
-  },
-}
+-- require('obsidian').setup {
+--   workspaces = {
+--     {
+--       name = "personal",
+--       path = "~/notes",
+--     },
+--   },
+--   daily_notes = {
+--     folder = "dairy/",
+--   },
+-- }
 
 
 -- [[ Configure Telescope ]]
@@ -754,9 +765,52 @@ cmp.setup {
 }
 
 -- set leap binds at bottom to make sure they apply
-vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
-vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
-vim.keymap.set({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
+vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
+vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
 
+
+-- nvim-tree
+local api = require("nvim-tree.api")
+
+local function edit_or_open()
+  local node = api.tree.get_node_under_cursor()
+
+  if node.nodes ~= nil then
+    -- expand or collapse folder
+    api.node.open.edit()
+  else
+    -- open file
+    api.node.open.edit()
+    -- Close the tree if file was opened
+    api.tree.close()
+  end
+end
+
+-- open as vsplit on current node
+local function vsplit_preview()
+  local node = api.tree.get_node_under_cursor()
+
+  if node.nodes ~= nil then
+    -- expand or collapse folder
+    api.node.open.edit()
+  else
+    -- open file as vsplit
+    api.node.open.vertical()
+  end
+
+  -- Finally refocus on tree if it was lost
+  api.tree.focus()
+end
+
+-- global
+vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", {silent = true, noremap = true})
+-- on_attach
+vim.keymap.set("n", "l", edit_or_open,          { desc = '[l] Edit Or Open'})
+vim.keymap.set("n", "L", vsplit_preview,        { desc = 'Vsplit Preview'})
+vim.keymap.set("n", "h", api.tree.close,        { desc = 'Close'})
+vim.keymap.set("n", "H", api.tree.collapse_all, { desc = 'Collapse All'})
+--
+-- vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
