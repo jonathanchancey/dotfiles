@@ -1,54 +1,60 @@
 ---
+- name: "Fish | Link"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files"
+    dest: "{{ ansible_user_dir }}/.config/fish"
+    state: link
+    force: true
+
 - name: Run openSUSE Tasks
   ansible.builtin.import_tasks: suse.yml
   when: ansible_os_family == 'Suse'
   become: true
 
-- name: "Fish | Set default terminal"
-  user:
-    name: "{{ host_user }}"
-    shell: /usr/bin/fish
-  become: true
+- name: Get location of fish shell
+  command: which fish
+  register: fish_location_cmd
+  ignore_errors: true
 
-- name: "Fish | Detect fisher"
-  ansible.builtin.stat:
-    path: "{{ ansible_user_dir }}/.config/fish/functions/fisher.fish"
-  register: fisher
+- name: Set fish location as fact
+  set_fact:
+    fish_location: "{{ fish_location_cmd.stdout }}"
+  when: fish_location_cmd.rc == 0
 
-- name: "Fish | Register fisher state"
-  ansible.builtin.set_fact:
-    fisher_is_installed: "{{ fisher.stat.exists }}"
+# - name: "Fish | Detect fisher"
+#   ansible.builtin.stat:
+#     path: "{{ ansible_user_dir }}/.config/fish/functions/fisher.fish"
+#   register: fisher
+#
+# - name: "Fish | Register fisher state"
+#   ansible.builtin.set_fact:
+#     fisher_is_installed: "{{ fisher.stat.exists }}"
+#
+# - name: "Fish | Debug fisher_is_installed"
+#   ansible.builtin.debug:
+#     var: fisher_is_installed
 
-- name: "Fish | Debug fisher_is_installed"
-  ansible.builtin.debug:
-    var: fisher_is_installed
+# - name: "Fish | Install fisher"
+#   when: not fisher_is_installed
+#   block:
+#     - name: "Fish | Download fisher Install Script"
+#       ansible.builtin.get_url:
+#         url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
+#         dest: /{{ ansible_user_dir }}/fisher.fish
+#         force: true
+#         mode: "0755"
+#       notify:
+#         - "Fish | Cleanup fisher install script"
+#     - name: "Fish | Run the install script"
+#       args:
+#         executable: {{ fish_location }}
+#       ansible.builtin.script: 'cat /{{ ansible_user_dir }}/fisher.fish | source && fisher install jorgebucaran/fisher'
 
-- name: "Fish | Install fisher"
-  when: not fisher_is_installed
-  block:
-    - name: "Fish | Download fisher Install Script"
-      ansible.builtin.get_url:
-        url: https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish
-        dest: /{{ ansible_user_dir }}/fisher.fish
-        force: true
-        mode: "0755"
-      notify:
-        - "Fish | Cleanup fisher install script"
-    - name: "Fish | Run the install script"
-      ansible.builtin.script:
-        cmd: /usr/bin/fish -c 'cat /{{ ansible_user_dir }}/fisher.fish | source && fisher install jorgebucaran/fisher'
+# - name: "Fish | Install Hydro"
+#   ansible.builtin.script:
+#     cmd: "{{ fish_location }}" -c 'fisher install jorgebucaran/hydro'
+#
+# - name: "Fish | Install bang-bang"
+#   ansible.builtin.script:
+#     cmd: "{{ fish_location }}" -c 'fisher install oh-my-fish/plugin-bang-bang'
 
-- name: "Fish | Install Hydro"
-  ansible.builtin.script:
-    cmd: /usr/bin/fish -c 'fisher install jorgebucaran/hydro'
-
-- name: "Fish | Install bang-bang"
-  ansible.builtin.script:
-    cmd: /usr/bin/fish -c 'fisher install oh-my-fish/plugin-bang-bang'
-
-- name: "Fish | Copy user.fish"
-  ansible.builtin.copy:
-    src: "conf.d/user.fish"
-    dest: "{{ ansible_user_dir }}/.config/fish/conf.d/user.fish"
-    mode: "0644"
-    backup: yes

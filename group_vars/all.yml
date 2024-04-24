@@ -3,10 +3,10 @@ default_roles:
   - neovim
   - tmux
   - zsh
+  - fish
 
 disabled_roles:
   - system
-  - fish
   - bash
   - docker
   - go
