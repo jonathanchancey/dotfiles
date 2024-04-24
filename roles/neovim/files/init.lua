@@ -159,11 +159,11 @@ require('lazy').setup({
 
   {
     -- Theme
-    'shaunsingh/nord.nvim',
+    'nordtheme/vim',
     priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'nord'
-    -- end,
+    config = function()
+      vim.cmd.colorscheme 'nord'
+    end,
   },
 
   {
@@ -221,28 +221,28 @@ require('lazy').setup({
     },
     build = ':TSUpdate',
   },
-   -- {
-   --   "epwalsh/obsidian.nvim",
-   --   version = "*",
-   --   lazy = true,
-   --   ft = "markdown",
-   --   dependencies = {
-   --     "nvim-lua/plenary.nvim",
-   --   },
-   -- },
+   {
+     "epwalsh/obsidian.nvim",
+     version = "*",
+     lazy = true,
+     ft = "markdown",
+     dependencies = {
+       "nvim-lua/plenary.nvim",
+     },
+   },
    {
      "elentok/format-on-save.nvim",
    },
    {
      'sbdchd/neoformat',
    },
-  {
-    'rebelot/kanagawa.nvim',
-    config = function()
-      vim.cmd.colorscheme 'nord'
-    end,
-
-  },
+  -- {
+  --   'rebelot/kanagawa.nvim',
+  --   config = function()
+  --     vim.cmd.colorscheme 'nord'
+  --   end,
+  --
+  -- },
   -- {
   --   "tadmccorkle/markdown.nvim",
   --   ft = "markdown", -- or 'event = "VeryLazy"'
@@ -430,17 +430,17 @@ require('format-on-save').setup({
 -- local defaultNotesPath = "~/notes"
 -- local notesPath = isWSL() and "/mnt/c/Users/seki/notes" or defaultNotesPath
 
--- require('obsidian').setup {
---   workspaces = {
---     {
---       name = "personal",
---       path = "~/notes",
---     },
---   },
---   daily_notes = {
---     folder = "dairy/",
---   },
--- }
+require('obsidian').setup {
+  workspaces = {
+    {
+      name = "personal",
+      path = "~/notes",
+    },
+  },
+  daily_notes = {
+    folder = "dairy/",
+  },
+}
 
 
 -- [[ Configure Telescope ]]
