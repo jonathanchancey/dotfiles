@@ -13,21 +13,8 @@ shell="$(basename "${SHELL}")"
 
 ## PACKAGE MANAGER DETECTION
 
-if [ -x "$(command -v nix-info)" ]; then
-	packages="$(ls -d -1 /nix/store/*/ | wc -l)"
-elif [ -x "$(command -v pkgin)" ]; then
-	packages="$(pkgin list | wc -l)"
-elif [ -x "$(command -v brew)" ]; then
-	brew_packages="$(brew list --formulae | wc -l)"
-	cask_packages="$(brew list --cask 2> /dev/null | wc -l)"
-	packages="$(( ${brew_packages} + ${cask_packages} ))"
-elif [ -x "$(command -v port)" ]; then
-	packages="$(port installed | wc -l)"
-else
-	packages='unknown'
-fi
-
-packages="$(echo "${packages}" | sed -e 's/^[ /t]*//')"
+echo BREW_NUMBER_INSTALLED_PACKAGES
+packages="NUM_BREW_PACKAGES$(echo "${packages}" | sed -e 's/^[ /t]*//')"
 
 ## UI DETECTION
 
@@ -43,7 +30,7 @@ else
 fi
 
 ui="$(basename "${ui}")"
-
+0
 ## DEFINE COLORS
 
 # probably don't change these

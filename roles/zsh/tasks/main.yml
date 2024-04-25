@@ -25,3 +25,10 @@
     state: link
     force: true
 
+- name: "Bash | Link scripts"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/scripts"
+    dest: "{{ ansible_user_dir }}/scripts"
+    state: link
+    force: true
+
