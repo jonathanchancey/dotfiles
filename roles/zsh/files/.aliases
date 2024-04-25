@@ -20,6 +20,7 @@ alias lg='lazygit'
 alias r='ranger'
 alias tf=terraform
 alias tg=terragrunt
+alias packages='$HOME/scripts/packages'
 
 # dotfiles command
 alias cdd='cd $HOME/git/dotfiles'

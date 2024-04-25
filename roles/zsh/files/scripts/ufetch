@@ -10,11 +10,7 @@ os="$(sw_vers -productName) $(sw_vers -productVersion)"
 kernel="$(uname -sr)"
 uptime="$(uptime | awk -F, '{sub(".*up ",x,$1);print $1}' | sed -e 's/^[ \t]*//')"
 shell="$(basename "${SHELL}")"
-
-## PACKAGE MANAGER DETECTION
-
-echo BREW_NUMBER_INSTALLED_PACKAGES
-packages="NUM_BREW_PACKAGES$(echo "${packages}" | sed -e 's/^[ /t]*//')"
+packages=$(<$HOME/.local/state/values/packages)
 
 ## UI DETECTION
 
@@ -30,7 +26,6 @@ else
 fi
 
 ui="$(basename "${ui}")"
-0
 ## DEFINE COLORS
 
 # probably don't change these
