@@ -11,8 +11,8 @@ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = tr
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+vim.keymap.set('n', '<leader>de', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+vim.keymap.set('n', '<leader>dq', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
@@ -57,45 +57,6 @@ vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
 vim.keymap.set({ 'n', 'x', 'o' }, 'gs', '<Plug>(leap-from-window)')
 
+-- set neotree binds
+vim.keymap.set('n', '<leader>e', "<Cmd>Neotree toggle<CR>", { desc = 'Open NeoTree' })
 
--- -- nvim-tree
--- local api = require("nvim-tree.api")
---
--- local function edit_or_open()
---   local node = api.tree.get_node_under_cursor()
---
---   if node.nodes ~= nil then
---     -- expand or collapse folder
---     api.node.open.edit()
---   else
---     -- open file
---     api.node.open.edit()
---     -- Close the tree if file was opened
---     api.tree.close()
---   end
--- end
---
--- -- open as vsplit on current node
--- local function vsplit_preview()
---   local node = api.tree.get_node_under_cursor()
---
---   if node.nodes ~= nil then
---     -- expand or collapse folder
---     api.node.open.edit()
---   else
---     -- open file as vsplit
---     api.node.open.vertical()
---   end
---
---   -- Finally refocus on tree if it was lost
---   api.tree.focus()
--- end
---
--- -- global
--- vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
--- -- on_attach
--- vim.keymap.set("n", "l", edit_or_open, { desc = '[l] Edit Or Open' })
--- vim.keymap.set("n", "L", vsplit_preview, { desc = 'Vsplit Preview' })
--- vim.keymap.set("n", "h", api.tree.close, { desc = 'Close' })
--- vim.keymap.set("n", "H", api.tree.collapse_all, { desc = 'Collapse All' })
---
