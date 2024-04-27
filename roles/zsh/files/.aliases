@@ -40,4 +40,4 @@ alias eb="$EDITOR $HOME/.bashrc"
 alias ea="$EDITOR ~/.aliases"
 alias ev="cd $HOME/.config/nvim && $EDITOR init.lua"
 alias ed="cd $HOME/git/dotfiles && $EDITOR ."
-
+alias eh="cd $HOME/.config/helix/ && hx ."
