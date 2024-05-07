@@ -4,33 +4,15 @@
   when: ansible_os_family == 'Suse'
   become: true
 
-- name: "Tmux | Checking for Distribution Config: {{ ansible_distribution }}"
-  ansible.builtin.stat:
-    path: "{{ role_path }}/tasks/{{ ansible_distribution }}.yml"
-  register: tmux_distribution_config
-
-- name: "Tmux | Run Tasks: {{ ansible_distribution }}"
-  ansible.builtin.include_tasks: "{{ ansible_distribution }}.yml"
-  when: tmux_distribution_config.stat.exists
-
 - name: "Tmux | Install TPM"
   ansible.builtin.git:
     repo: https://github.com/tmux-plugins/tpm
     dest: ~/.tmux/plugins/tpm
 
-- name: "Tmux | Configure tmux"
-  ansible.builtin.copy:
-    src: tmux.conf
+- name: "Tmux | Link"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/.tmux.conf"
     dest: "{{ ansible_user_dir }}/.tmux.conf"
-    mode: "0644"
-    directory_mode: "0755"
+    state: link
     force: true
 
-- name: Tmux | Ensure directory exists
-  become: true
-  file:
-    path: "/run/tmux/1000"
-    state: directory
-    owner: ansible-user
-    group: ansible-user
-    mode: '0700'

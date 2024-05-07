@@ -1,16 +1,20 @@
 default_roles:
-  - system
-  - fish
-  - bash
-  # - docker
   - git
+  - neovim
+  - tmux
+  - zsh
+  - fish
+
+disabled_roles:
+  - system
+  - bash
+  - docker
   - go
   - opentofu
   - utils
   - k8s
-  - neovim
-  - tmux
   - amfora
 
 git_user_name: "jonathanchancey"
 git_user_email: "jonathan@chancey.dev"
+

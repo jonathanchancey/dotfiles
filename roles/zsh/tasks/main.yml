@@ -1,0 +1,34 @@
+---
+- name: Run macOS Tasks
+  ansible.builtin.import_tasks: macOS.yml
+  when: ansible_os_family == 'Darwin'
+  become: true
+
+- name: "Bash | Link .aliases"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/.aliases"
+    dest: "{{ ansible_user_dir }}/.aliases"
+    state: link
+    force: true
+
+- name: "Bash | Link .env"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/.env"
+    dest: "{{ ansible_user_dir }}/.env"
+    state: link
+    force: true
+
+- name: "Bash | Link .zshrc"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/.zshrc"
+    dest: "{{ ansible_user_dir }}/.zshrc"
+    state: link
+    force: true
+
+- name: "Bash | Link scripts"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/scripts"
+    dest: "{{ ansible_user_dir }}/scripts"
+    state: link
+    force: true
+

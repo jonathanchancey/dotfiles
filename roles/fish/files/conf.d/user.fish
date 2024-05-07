@@ -1,4 +1,5 @@
 fish_add_path $HOME/scripts/
+eval "$(/opt/homebrew/bin/brew shellenv)"
  
 function cpr
     rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 $argv                                   

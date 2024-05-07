@@ -1,0 +1,8 @@
+.DS_Store
+.gitconfig
+roles/neovim/files/nvim/lazy-lock.json
+roles/fish/files/conf.d/pure.fish
+roles/fish/files/conf.d/_pure_init.fish
+roles/fish/files/fish_variables
+roles/fish/files/functions
+
