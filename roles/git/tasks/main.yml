@@ -47,6 +47,12 @@
     scope: global
     value: lf
 
+- name: "Git | Set global gitignore"
+  community.general.git_config:
+    name: core.excludesFile
+    scope: global
+    value: '~/.gitignore'
+      
 # - name: "Git | Set user.signingkey"
 #   community.general.git_config:
 #     name: user.signingkey

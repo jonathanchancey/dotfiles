@@ -15,7 +15,6 @@ alias l='ls -l'
 alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
-alias l='lazygit'
 alias lg='lazygit'
 alias r='ranger'
 alias tf=terraform
@@ -32,6 +31,7 @@ alias sz="source $HOME/.zshrc && echo $HOME/.zshrc sourced"
 alias sa="source $HOME/.aliases && echo $HOME/.aliases sourced"
 alias szp="source $HOME/.zprofile && echo $HOME/.zprofile sourced"
 alias sf="source $HOME/.config/fish/conf.d/user.fish && echo $HOME/.config/fish/conf.d/user.fish sourced"
+alias sv='source .venv/bin/activate'
 
 # quick editing
 alias ee="$EDITOR $HOME/.env"
@@ -41,3 +41,4 @@ alias ea="$EDITOR ~/.aliases"
 alias ev="cd $HOME/.config/nvim && $EDITOR init.lua"
 alias ed="cd $HOME/git/dotfiles && $EDITOR ."
 alias eh="cd $HOME/.config/helix/ && hx ."
+alias ek='cd $HOME/Library/CloudStorage/OneDrive-OneInc/knowledge/ && $EDITOR .'
