@@ -19,6 +19,7 @@ if status is-interactive
     # source files if they exist
     test -s ~/.env && source ~/.env || true
     test -s ~/.aliases && source ~/.aliases || true
+    test -s ~/.local/private/aliases && source ~/.local/private/aliases  || true
 
     # alias lsd to ls if it exists
     type -q lsd; and alias ls='lsd'
