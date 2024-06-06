@@ -15,6 +15,6 @@ disabled_roles:
   - k8s
   - amfora
 
-git_user_name: "jchancey"
-git_user_email: "jchancey@oneinc.com"
+git_user_name: "Jonathan Chancey"
+git_user_email: "jonathan@chancey.dev"
 
