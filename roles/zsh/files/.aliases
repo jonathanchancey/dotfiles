@@ -1,5 +1,5 @@
 # aliases
-# xbps quality of life 
+# xbps quality of life
 alias xi="brew install"
 alias xr="brew uninstall"
 alias xdu="brew update"
@@ -20,6 +20,7 @@ alias r='ranger'
 alias tf=terraform
 alias tg=terragrunt
 alias packages='$HOME/scripts/packages'
+alias a='ansible -e "@local.vars.yml"'
 
 # dotfiles command
 alias cdd='cd $HOME/git/dotfiles'
