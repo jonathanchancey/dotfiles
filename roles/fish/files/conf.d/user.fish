@@ -12,6 +12,16 @@ function mvr
     rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv
 end
 
+# create a new branch with context
+function cnb
+    set branch (git branch --show-current)
+    set domain_user jchancey
+    set branch_name $argv[1]-$domain_user-$branch
+    echo $branch_name
+    git checkout -b $branch_name
+end
+
+
 function fish_greeting
     # if ufetch is a known command, run it
     type -q ufetch; and ufetch
