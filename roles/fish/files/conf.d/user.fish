@@ -12,10 +12,30 @@ function mvr
     rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv
 end
 
+# create a new branch with context
+function cnb
+    set branch (git branch --show-current)
+    set domain_user jchancey
+    set branch_name $argv[1]-$domain_user-$branch
+    echo $branch_name
+    git checkout -b $branch_name
+end
+
+
 function fish_greeting
     # if ufetch is a known command, run it
     type -q ufetch; and ufetch
 end
+
+# draft idea to run xi with no arguments will install program if xq program was last run
+# function xi
+#     if test string split " " "$history[1]" = "xq"
+#         brew install $history[1..3]
+#     end
+#     # if test "$history[1][2]" = "xq brew install"
+#     #     brew install $history[1..3]
+#     # end
+# end
 
 if status is-interactive
 

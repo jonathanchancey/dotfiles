@@ -52,7 +52,19 @@
     name: core.excludesFile
     scope: global
     value: '~/.gitignore'
-      
+
+- name: "Git | Set checkout alias"
+  community.general.git_config:
+    name: alias.c
+    scope: global
+    value: checkout
+
+- name: "Git | Set status alias"
+  community.general.git_config:
+    name: alias.s
+    scope: global
+    value: status
+
 # - name: "Git | Set user.signingkey"
 #   community.general.git_config:
 #     name: user.signingkey
