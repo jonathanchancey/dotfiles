@@ -2,8 +2,8 @@ default_roles:
   - git
   - neovim
   - tmux
-  - zsh
   - fish
+  - wezterm
 
 disabled_roles:
   - system
@@ -14,6 +14,5 @@ disabled_roles:
   - utils
   - k8s
   - amfora
-
-git_user_name: "Jonathan Chancey"
+  - zsh
 

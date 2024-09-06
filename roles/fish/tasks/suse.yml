@@ -6,9 +6,3 @@
     state: latest
   become: true
 
-- name: "Fish | Set default terminal"
-  user:
-    name: "{{ host_user }}"
-    shell: /usr/bin/fish
-  become: true
-

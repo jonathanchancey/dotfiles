@@ -12,7 +12,6 @@ DOTFILE_REPO_URL='https://github.com/jonathanchancey/dotfiles'
 # gum defaults
 export GUM_INPUT_CURSOR_FOREGROUND="#b57edc"
 export GUM_INPUT_PROMPT_FOREGROUND="#b57edc"
-# export GUM_INPUT_PLACEHOLDER="What's up?"
 export GUM_INPUT_PROMPT="* "
 export GUM_INPUT_WIDTH=80
 
@@ -118,6 +117,7 @@ if [ -n "$VAULT_SECRET_MISSING" ]; then
     gum input --placeholder "paste your secret here" --password > $VAULT_SECRET
     chmod 600 $VAULT_SECRET
     VAULT_SECRET_MISSING=""
+
     print_env_check
 fi
 
@@ -125,6 +125,7 @@ fi
 if [ -n "$VAULT_SECRET_WRONG_PERMS" ]; then
     chmod 600 $VAULT_SECRET
     VAULT_SECRET_WRONG_PERMS=""
+
     print_env_check
 fi
 
