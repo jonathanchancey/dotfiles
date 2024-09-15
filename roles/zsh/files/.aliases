@@ -24,7 +24,7 @@ alias a='ansible -e "@local.vars.yml"'
 
 # dotfiles command
 alias cdd='cd $HOME/git/dotfiles'
-alias dots='ansible-playbook $HOME/git/dotfiles/main.yml'
+alias dots='ansible-playbook -e "@~/.local/private/vars.yml" $HOME/git/dotfiles/main.yml'
 
 # everyday quick sourcing
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"

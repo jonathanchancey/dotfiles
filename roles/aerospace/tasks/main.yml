@@ -1,0 +1,13 @@
+---
+- name: Wezterm | Ensure directory exists
+  file:
+    path: "{{ ansible_user_dir }}/.config/aerospace/"
+    state: directory
+    mode: "0755"
+
+- name: "Aerospace | Configure"
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/aerospace"
+    dest: "{{ ansible_user_dir }}/.config/aerospace"
+    state: link
+    force: true

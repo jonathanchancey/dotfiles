@@ -4,6 +4,7 @@ default_roles:
   - tmux
   - fish
   - wezterm
+  - aerospace
 
 disabled_roles:
   - system
@@ -15,4 +16,3 @@ disabled_roles:
   - k8s
   - amfora
   - zsh
-
