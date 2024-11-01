@@ -1,0 +1,28 @@
+#!/usr/bin/env fish
+
+# copy dcim and misc to network volume
+
+# Set the source and destination paths
+set sd_card "/Volumes/a6100 ii"
+set smb_base "/Volumes/personal/external-library/camera/a6100"
+set current_date (date +%Y-%m-%d-%H-%M)
+set dest_dir "$smb_base/$current_date"
+
+# Check if the SD card is mounted
+if not test -d $sd_card
+    echo "Error: SD card 'a6100' not mounted."
+    exit 1
+end
+
+if not test -d $smb_base
+    echo "Error: Share not mounted."
+    exit 1
+end
+
+mkdir -p $dest_dir
+
+rsync -av --progress --remove-source-files $sd_card/DCIM $dest_dir/
+rsync -av --progress --remove-source-files $sd_card/private $dest_dir/
+
+# find $sd_card -type d -empty -delete
+
