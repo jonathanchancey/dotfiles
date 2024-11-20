@@ -112,6 +112,8 @@ alt-4 = 'workspace 4'
 alt-5 = 'workspace 5'
 alt-6 = 'workspace 6'
 alt-w = 'workspace w'
+alt-q = 'workspace q'
+alt-e = 'workspace e'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace 1'
@@ -121,6 +123,8 @@ alt-shift-4 = 'move-node-to-workspace 4'
 alt-shift-5 = 'move-node-to-workspace 5'
 alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-w = 'move-node-to-workspace w'
+alt-shift-q = 'move-node-to-workspace q'
+alt-shift-e = 'move-node-to-workspace e'
 
 alt-shift-f = 'fullscreen'
 
@@ -165,3 +169,7 @@ alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
+
+[[on-window-detected]]
+if.window-title-regex-substring = 'Floating'
+run = 'layout floating'
