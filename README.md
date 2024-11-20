@@ -42,6 +42,15 @@ ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/v
 cat myfile.conf | ansible-vault encrypt_string --vault-password-file $HOME/.config/ansible-vault/vault.secret --stdin-name "myfile"
 ```
 
+## Neovim
+
+After installing on a new system you may have to update AstroNvim and its plugins:
+
+Open Neovim
+Run `:AstroUpdate` to update AstroNvim
+Run `:Lazy update` to update all plugins
+
+
 ## Credits
 
 Uses the Ansible dotfiles strategy from [TechDufus](https://github.com/TechDufus/dotfiles/)

@@ -36,7 +36,7 @@ default-root-container-orientation = 'auto'
 # Drop it from your config, if you don't like this behavior
 # See https://nikitabobko.github.io/AeroSpace/guide#on-focus-changed-callbacks
 # See https://nikitabobko.github.io/AeroSpace/commands#move-mouse
-on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # on-focused-changed = 'move-mouse monitor-lazy-center'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
@@ -127,6 +127,8 @@ alt-shift-q = 'move-node-to-workspace q'
 alt-shift-e = 'move-node-to-workspace e'
 
 alt-shift-f = 'fullscreen'
+alt-shift-space = 'layout floating tiling'
+alt-shift-c = 'reload-config'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
@@ -138,9 +140,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 # if.app-id = 'org.alacritty'
 # run = 'move-node-to-workspace T' # mnemonics T - Terminal
 #
-# [[on-window-detected]]
-# if.app-id = 'com.Mozilla.Firefox'
-# run = 'move-node-to-workspace W' # mnemonics W - Web browser
+
 
 # com.apple.finder
 # org.mozilla.firefox
@@ -173,3 +173,20 @@ alt-shift-l = ['join-with right', 'mode main']
 [[on-window-detected]]
 if.window-title-regex-substring = 'Floating'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = ['layout floating', 'move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.com.zen.browser'
+run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+if.app-id = 'com.Mozilla.Firefox'
+run = 'move-node-to-workspace 1' # mnemonics W - Web browser
+
+[[on-window-detected]]
+if.app-id = 'com.hnc.Discord'
+run = ['move-node-to-workspace 4']
+
