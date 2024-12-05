@@ -60,6 +60,8 @@ if status is-interactive
     zoxide init fish | source
     direnv hook fish | source
 
+    set -x MANPAGER 'nvim +Man!'
+
     # add kubectl aliases if they exist
     test -f ~/.config/kubectl_aliases.fish && source ~/.config/kubectl_aliases.fish
 end
