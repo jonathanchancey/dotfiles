@@ -33,6 +33,7 @@ alias sa="source $HOME/.aliases && echo $HOME/.aliases sourced"
 alias szp="source $HOME/.zprofile && echo $HOME/.zprofile sourced"
 alias sf="source $HOME/.config/fish/conf.d/user.fish && echo $HOME/.config/fish/conf.d/user.fish sourced"
 alias sv='source .venv/bin/activate'
+alias pwdns='kubens $(basename "$PWD")'
 
 # quick editing
 alias ee="$EDITOR $HOME/.env"
