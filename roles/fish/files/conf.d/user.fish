@@ -1,6 +1,8 @@
 fish_add_path $HOME/scripts/
 fish_add_path $HOME/.local/private/scripts/
 fish_add_path $HOME/.local/bin/
+fish_add_path $HOME/go/bin/
+fish_add_path $HOME/.krew/bin/
 
 function cpr
     rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 $argv

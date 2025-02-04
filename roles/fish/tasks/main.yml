@@ -15,6 +15,7 @@
   command: which fish
   register: fish_location_cmd
   ignore_errors: true
+  changed_when: false
 
 - name: Set fish location as fact
   set_fact:
