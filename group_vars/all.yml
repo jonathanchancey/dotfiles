@@ -3,7 +3,6 @@ default_roles:
   - neovim
   - tmux
   - fish
-  - wezterm
   - aerospace
 
 disabled_roles:
@@ -16,3 +15,5 @@ disabled_roles:
   - k8s
   - amfora
   - zsh
+  - wezterm
+
