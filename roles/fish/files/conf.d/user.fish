@@ -22,7 +22,7 @@ function cnb
 end
 
 function se
-    sops --encrypt --encrypted-regex '^(data|stringData)$' --in-place $argv
+    sops --encrypt --in-place $argv
 end
 
 function sd
@@ -35,18 +35,18 @@ function fish_greeting
 end
 
 function y
-	set tmp (mktemp -t "yazi-cwd.XXXXXX")
-	yazi $argv --cwd-file="$tmp"
-	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-		builtin cd -- "$cwd"
-	end
-	rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 if status is-interactive
 
     # source files 
-    source ~/.env 
+    source ~/.env
     source ~/.aliases
     source ~/.local/private/.aliases
 
@@ -64,10 +64,11 @@ if status is-interactive
 
     set MANPAGER 'nvim +Man!'
 
-    function last_history_item; echo $history[1]; end 
+    function last_history_item
+        echo $history[1]
+    end
     abbr -a !! --position anywhere --function last_history_item
 
     # add kubectl aliases if they exist
     test -f ~/.config/kubectl_aliases.fish && source ~/.config/kubectl_aliases.fish
 end
-

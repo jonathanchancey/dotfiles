@@ -4,7 +4,7 @@
 
 # Set the source and destination paths
 set sd_card "/Volumes/a6100 ii"
-set smb_base "/Volumes/personal/external-library/camera/a6100"
+set smb_base /Volumes/personal/external-library/camera/a6100
 set current_date (date +%Y-%m-%d-%H-%M)
 set dest_dir "$smb_base/$current_date"
 
@@ -14,6 +14,12 @@ if not test -d $sd_card
     exit 1
 end
 
+# Try to mount personal share if not mounted
+if not test -d $smb_base
+    open 'smb://{{ SMB_USER }}@10.10.0.165/personal'
+end
+
+# Fail if share not monuted
 if not test -d $smb_base
     echo "Error: Share not mounted."
     exit 1
@@ -25,4 +31,3 @@ rsync -av --progress --remove-source-files $sd_card/DCIM $dest_dir/
 rsync -av --progress --remove-source-files $sd_card/private $dest_dir/
 
 # find $sd_card -type d -empty -delete
-
