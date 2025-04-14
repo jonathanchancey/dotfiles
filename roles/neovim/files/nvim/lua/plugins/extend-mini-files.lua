@@ -31,6 +31,9 @@ return {
       width_focus = 30,
       width_preview = 100,
     },
+    mappings = {
+      go_in_plus = "<Enter>",
+    },
     options = {
       use_as_default_explorer = true,
     },
