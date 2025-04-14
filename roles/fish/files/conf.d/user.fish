@@ -60,7 +60,6 @@ if status is-interactive
 
     # kubectl completion fish | source
     zoxide init fish | source
-    direnv hook fish | source
 
     set MANPAGER 'nvim +Man!'
 
