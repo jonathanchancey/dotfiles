@@ -23,3 +23,5 @@
 #     # mode: "0555"
 #     # owner: '{{ ansible_env.USER}}'
 
+# defaults write -g NSWindowShouldDragOnGesture -bool true
+
