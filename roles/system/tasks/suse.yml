@@ -2,5 +2,5 @@
 - name: "System | {{ ansible_distribution }} | Perform a dist-upgrade"
   become: true
   community.general.zypper:
-    name: '*'
+    name: "*"
     state: dist-upgrade

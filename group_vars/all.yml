@@ -1,19 +1,12 @@
 default_roles:
+  - brew
+  - fish
   - git
   - neovim
   - tmux
   - fish
-  - aerospace
+  - zsh
 
 disabled_roles:
-  - system
-  - bash
-  - docker
-  - go
-  - opentofu
   - utils
-  - k8s
-  - amfora
-  - zsh
-  - wezterm
-
+  - thunderbird
