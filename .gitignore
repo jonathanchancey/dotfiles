@@ -6,4 +6,4 @@ roles/fish/files/conf.d/_pure_init.fish
 roles/fish/files/fish_variables
 roles/fish/files/functions
 .ansible/.lock
-
+.private
