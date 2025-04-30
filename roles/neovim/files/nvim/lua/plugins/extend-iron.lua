@@ -1,5 +1,6 @@
 return {
   "Vigemus/iron.nvim",
+  enabled = false,
   config = function(plugins, opts)
     local iron = require("iron.core")
 
