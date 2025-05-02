@@ -1,6 +1,0 @@
----
-- name: "Go | Install"
-  community.general.zypper:
-    name:
-      - go
-    state: latest

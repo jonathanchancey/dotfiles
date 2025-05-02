@@ -22,6 +22,16 @@ alias tg=terragrunt
 alias packages='$HOME/scripts/packages'
 alias a='ansible -e "@local.vars.yml"'
 
+# git
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gsw='git switch'
+alias gb='git branch'
+alias gcl='git clone'
+alias gd='git diff'
+alias gl='git log'
+
 # dotfiles command
 alias cdd='cd $HOME/git/dotfiles'
 alias dots='ansible-playbook -e "@~/.local/private/vars.yml" $HOME/git/dotfiles/main.yml'

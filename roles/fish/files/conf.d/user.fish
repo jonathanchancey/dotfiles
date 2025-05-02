@@ -43,6 +43,10 @@ function y
     rm -f -- "$tmp"
 end
 
+function mkcd
+    mkdir -p $argv[1] && cd $argv[1]
+end
+
 if status is-interactive
 
     # source files 

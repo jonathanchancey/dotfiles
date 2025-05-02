@@ -38,7 +38,7 @@
       "int" : 0
     },
     "appSpecs" : {
-
+      "string" : "[{\"loc\":0,\"children\":[{\"loc\":9,\"display\":-3,\"w\":\"1265\",\"h\":\"1405\",\"title\":\"ExUYn4jfwkkPgvdb8irYos\\\/qcgkRz2Nty4zCPQEdWE1SxOxdTfh\\\/Xo8Bf4o0KQv9WdBTSVu6pteE+9fIQdFdn5TbFVRaMGifo\\\/NFSgsu1CcqDnYga357SpL9PjlX\",\"bundleId\":\"com.brave.Browser\",\"id\":102,\"x\":\"10\",\"y\":\"0\"},{\"title\":\"u2NndUFBn4Vt58flUyUE8N+C4BXj29u+2VgND5x7eQUkuLtvyQvzNTdRF6GJwJ9\\\/OnTu+3BspuGF53ChyH3zbyxC2byiZcTQn2E=\",\"w\":\"1265\",\"h\":\"1395\",\"id\":105,\"y\":\"10\",\"display\":-3,\"loc\":9,\"bundleId\":\"com.mitchellh.ghostty\",\"x\":\"1285\"},{\"h\":\"1395\",\"w\":\"1265\",\"bundleId\":\"md.obsidian\",\"y\":\"10\",\"title\":\"EFCQlOBGPASP70fQgQfnXrZ4cgD4utVf+JcY7CvCE1S4Ns6pJtS26OGw6czLuiDxYuekp5hPWeL+6ui9744=\",\"loc\":9,\"x\":\"1285\",\"id\":106,\"display\":-3}],\"id\":113,\"name\":\"Layout 1\",\"isGroup\":true},{\"loc\":0,\"children\":[{\"h\":\"1395\",\"x\":\"10\",\"bundleId\":\"md.obsidian\",\"y\":\"10\",\"display\":-3,\"w\":\"838\",\"id\":117,\"loc\":9,\"title\":\"UW70kx3Hfo5N0jddWIr\\\/kyW2tZYyUOnFW7iJpWT2BGJZnQ\\\/e\\\/9YhkVOLWQvPVh1kPveKwKBdQaj+IMvOEA==\"},{\"bundleId\":\"com.googlecode.iterm2\",\"x\":\"10\",\"id\":118,\"y\":\"10\",\"w\":\"838\",\"loc\":9,\"h\":\"1395\",\"title\":\"er0xkGM7u8gw3616rZLJUbtThtQ2hMl+VKsYDquSqeP99IT4tLlrbUNrULbmjfx80i9iZf73nqaJndWEpgbuW6WM4G5nx5ucTXy4Ng==\",\"display\":-3},{\"title\":\"yVVlDya94Vog5u5OIu9CTUwoeH0\\\/3OtBWP6X9KpvMGZd9csaZDS5\\\/3BxwMGnl8CtigHK36mSKHP1cL2Tq+IbNg27\",\"x\":\"859\",\"bundleId\":\"com.googlecode.iterm2\",\"w\":\"1691\",\"display\":-3,\"y\":\"10\",\"id\":119,\"loc\":9,\"h\":\"1395\"}],\"name\":\"Focus Right\",\"isGroup\":true,\"id\":121}]"
     },
     "attemptMatchOnNextPrevDisplay" : {
       "int" : 0
@@ -125,7 +125,7 @@
       "float" : 10
     },
     "gestures" : {
-      "string" : "[1,{\"trail\":4,\"flags\":0},31,{\"trail\":4,\"flags\":524288},0,{\"trail\":3,\"flags\":0},30,{\"trail\":3,\"flags\":524288}]"
+      "string" : "[0,{\"trail\":3,\"flags\":0},107,{\"trail\":4,\"flags\":524288},1,{\"trail\":4,\"flags\":0}]"
     },
     "helperRelaunch" : {
       "int" : 3
@@ -227,7 +227,7 @@
       "int" : 0
     },
     "portraitSnapAreas" : {
-
+      "string" : "[3,{\"action\":16},5,{\"compound\":-5},8,{\"action\":14},1,{\"action\":11},2,{\"action\":2},4,{\"compound\":-5},6,{\"action\":10},7,{\"compound\":-6}]"
     },
     "preciseScrollTriggerIncrements" : {
       "float" : 10
@@ -260,7 +260,7 @@
       "int" : 2
     },
     "reticleColor" : {
-      "string" : "{\"blue\":0.2,\"alpha\":0.5,\"green\":0.3,\"red\":0.8}"
+      "string" : "{\"blue\":0.2,\"green\":0.3,\"alpha\":0.5,\"red\":0.8}"
     },
     "reticleDisplayMinDist" : {
       "float" : 0
@@ -344,7 +344,7 @@
       "float" : 1680
     },
     "stageSize" : {
-      "float" : 190
+      "float" : -1
     },
     "stashAnimation" : {
       "int" : 0
@@ -371,7 +371,7 @@
       "int" : 0
     },
     "stashInMenu" : {
-      "int" : 0
+      "int" : 2
     },
     "stashMultipleStagger" : {
       "int" : 0
@@ -422,7 +422,7 @@
       "int" : 1
     },
     "todoSidebarWidth" : {
-      "float" : 600
+      "float" : 1180
     },
     "togggleTodoShortcut" : {
 
@@ -544,6 +544,6 @@
       "modifierFlags" : 786432
     }
   },
-  "timestamp" : 740598974.833276,
+  "timestamp" : 766602142.73119,
   "version" : "163"
 }

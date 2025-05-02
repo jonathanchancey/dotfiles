@@ -21,4 +21,3 @@
   set_fact:
     fish_location: "{{ fish_location_cmd.stdout }}"
   when: fish_location_cmd.rc == 0
-
