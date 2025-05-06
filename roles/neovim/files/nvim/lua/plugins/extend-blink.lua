@@ -1,6 +1,0 @@
--- return {
---   "saghen/blink.cmp",
---   opts = {
---     list = { selection = { preselect = false, auto_insert = true } },
---   },
--- }
