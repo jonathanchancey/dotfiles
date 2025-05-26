@@ -1,0 +1,10 @@
+# ---
+# - name: "Brew | Bundle Install"
+#   community.general.homebrew:
+#     name:
+#       - zsh
+#     state: latest
+#   become: true
+# # tldr brew-bundle
+# - name: Brew | Check all dependeciences are installed
+#   --check
