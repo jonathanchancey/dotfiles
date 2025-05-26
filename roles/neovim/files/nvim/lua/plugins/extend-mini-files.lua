@@ -28,8 +28,8 @@ return {
     windows = {
       preview = true,
       width_nofocus = 20,
-      width_focus = 30,
-      width_preview = 100,
+      width_focus = 50,
+      width_preview = 25,
     },
     mappings = {
       go_in_plus = "<Enter>",
