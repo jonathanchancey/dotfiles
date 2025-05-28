@@ -120,14 +120,14 @@ alt-shift-semicolon = 'mode service'
 
 # https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [workspace-to-monitor-force-assignment]
-q = 'main'
-w = 'main'
-e = 'main'
-r = 'main'
-1 = 'secondary'
-2 = 'secondary'
-3 = 'secondary'
-4 = 'secondary'
+    q = 'main'
+    w = 'main'
+    e = 'main'
+    r = 'main'
+    1 = 'secondary'
+    2 = 'secondary'
+    3 = 'secondary'
+    4 = 'secondary'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
