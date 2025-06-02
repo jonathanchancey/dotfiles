@@ -1,14 +1,15 @@
--- See https://github.com/echasnovski/mini.nvim/blob/main/doc/mini-surround.txt
-require("mini.surround").setup({
-  custom_surroundings = {
-    ["d"] = {
-      -- input = { "'''", "'''" },
-      input = { "'''().-()'''" }, -- Added capture groups
-      output = { left = "'''\n", right = "\n'''" },
-    },
-    ["`"] = {
-      input = { "```", "```" },
-      output = { left = "```\n", right = "\n```" },
+return {
+  "echasnovski/mini.surround",
+  opts = {
+    custom_surroundings = {
+      ["d"] = {
+        input = { "'''().-()'''" }, -- Added capture groups
+        output = { left = "'''\n", right = "\n'''" },
+      },
+      ["`"] = {
+        input = { "```&quot;, &quot;```" },
+        output = { left = "```\n&quot;, right = &quot;\n```" },
+      },
     },
   },
-})
+}
