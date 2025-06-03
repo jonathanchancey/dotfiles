@@ -120,52 +120,52 @@ alt-shift-semicolon = 'mode service'
 
 # https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [workspace-to-monitor-force-assignment]
-    q = 'main'
-    w = 'main'
-    e = 'main'
-    r = 'main'
-    1 = 'secondary'
-    2 = 'secondary'
-    3 = 'secondary'
-    4 = 'secondary'
+q = 'main'
+w = 'main'
+e = 'main'
+r = 'main'
+1 = 'secondary'
+2 = 'secondary'
+3 = 'secondary'
+4 = 'secondary'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
-    esc = ['reload-config', 'mode main']
-    shift-r = ['reload-config', 'mode main']
-    r = ['flatten-workspace-tree', 'mode main'] # reset layout
-    f = ['layout floating tiling', 'mode main'] # toggle between floating and tiling layout
+esc = ['reload-config', 'mode main']
+shift-r = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main'] # reset layout
+f = ['layout floating tiling', 'mode main'] # toggle between floating and tiling layout
 
-    backspace = ['close-all-windows-but-current', 'mode main']
-    alt-shift-h = ['join-with left', 'mode main']
-    alt-shift-j = ['join-with down', 'mode main']
-    alt-shift-k = ['join-with up', 'mode main']
-    alt-shift-l = ['join-with right', 'mode main']
-
-[[on-window-detected]]
-    if.window-title-regex-substring = 'Floating'
-    run = 'layout floating'
+backspace = ['close-all-windows-but-current', 'mode main']
+alt-shift-h = ['join-with left', 'mode main']
+alt-shift-j = ['join-with down', 'mode main']
+alt-shift-k = ['join-with up', 'mode main']
+alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-    if.window-title-regex-substring = 'Affinity'
-    run = 'layout floating'
+if.window-title-regex-substring = 'Floating'
+run = 'layout floating'
 
 [[on-window-detected]]
-    if.app-name-regex-substring = 'Discord'
-    run = ['move-node-to-workspace 1']
+if.window-title-regex-substring = 'Affinity'
+run = 'layout floating'
 
 [[on-window-detected]]
-    if.app-id = 'com.apple.TextEdit'
-    run = 'layout floating'
+if.app-name-regex-substring = 'Discord'
+run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
-    if.window-title-regex-substring = 'yazi'
-    run = 'layout tiling'
+if.app-id = 'com.apple.TextEdit'
+run = 'layout floating'
 
 [[on-window-detected]]
-    check-further-callbacks = true
-    run = 'layout floating'
+if.window-title-regex-substring = 'yazi'
+run = 'layout tiling'
+
+#[[on-window-detected]]
+#check-further-callbacks = true
+#run = 'layout floating'
 
 # app ids
 # com.apple.finder
