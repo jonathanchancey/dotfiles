@@ -27,9 +27,9 @@ return {
   opts = {
     windows = {
       preview = true,
-      width_nofocus = 20,
+      width_nofocus = 40,
       width_focus = 50,
-      width_preview = 25,
+      width_preview = 40,
     },
     mappings = {
       go_in_plus = "<Enter>",
