@@ -21,6 +21,7 @@ alias tf=terraform
 alias tg=terragrunt
 alias packages='$HOME/scripts/packages'
 alias a='ansible -e "@local.vars.yml"'
+alias terraform='tofu'
 
 # git
 alias gs='git status'
