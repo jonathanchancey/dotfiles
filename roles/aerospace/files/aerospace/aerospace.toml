@@ -55,8 +55,8 @@ outer.right =      5
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
-alt-enter = 'exec-and-forget open -n -a "Ghostty"'
-cmd-enter= 'exec-and-forget open -n -a "Ghostty"'
+# alt-enter = 'exec-and-forget open -n -a "iterm2"'
+# cmd-enter= 'exec-and-forget open -a "Ghostty"'
 shift-cmd-e = 'exec-and-forget open -a "Finder"'
 cmd-e = '''
 exec-and-forget open -na "Ghostty" --args --command=yazi \
