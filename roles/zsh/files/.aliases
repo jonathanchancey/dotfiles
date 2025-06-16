@@ -3,7 +3,7 @@
 alias xi="brew install"
 alias xr="brew uninstall"
 alias xdu="brew update"
-alias xdup="brew update && tldr --update & brew upgrade"
+alias xdup="brew update && tldr --update & brew upgrade && packages"
 alias xq="brew search"
 
 # normal aliases

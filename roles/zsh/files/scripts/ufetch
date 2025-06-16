@@ -1,5 +1,4 @@
 #!/bin/sh
-#
 # ufetch-macos - tiny system info for macos
 
 ## INFO
@@ -26,21 +25,18 @@ else
 fi
 
 ui="$(basename "${ui}")"
-## DEFINE COLORS
 
-# probably don't change these
-if [ -x "$(command -v tput)" ]; then
-	bold="$(tput bold 2> /dev/null)"
-	black="$(tput setaf 0 2> /dev/null)"
-	red="$(tput setaf 1 2> /dev/null)"
-	green="$(tput setaf 2 2> /dev/null)"
-	yellow="$(tput setaf 3 2> /dev/null)"
-	blue="$(tput setaf 4 2> /dev/null)"
-	magenta="$(tput setaf 5 2> /dev/null)"
-	cyan="$(tput setaf 6 2> /dev/null)"
-	white="$(tput setaf 7 2> /dev/null)"
-	reset="$(tput sgr0 2> /dev/null)"
-fi
+bold='[1m'
+black='[30m'
+red='[31m'
+green='[32m'
+yellow='[33m'
+blue='[34m'
+magenta='[35m'
+cyan='[36m'
+white='[37m'
+grey='[90m'
+reset='[0m'
 
 # you can change these
 lc="${reset}${bold}"                # labels
@@ -58,7 +54,7 @@ ${c0}   /         \  ${lc}KERNEL:    ${ic}${kernel}${reset}
 ${c0}  |         /   ${lc}UPTIME:    ${ic}${uptime}${reset}
 ${c0}  |         \\_  ${lc}PACKAGES:  ${ic}${packages}${reset}
 ${c0}   \         /  ${lc}SHELL:     ${ic}${shell}${reset}
-${c0}    \`._.-._.\`   ${lc}${uitype}:        ${ic}${ui}${reset}
+${c0}    \`._.-._.\` ${lc}${ci}  ${red}███${green}███${yellow}███${blue}███${magenta}███${cyan}███${reset}
 
 EOF
 
