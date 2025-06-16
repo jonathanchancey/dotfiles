@@ -148,11 +148,15 @@ if.window-title-regex-substring = 'Floating'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.window-title-regex-substring = 'Affinity'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Discord'
+if.app-id = 'com.hnc.Discord'
 run = ['move-node-to-workspace 1']
 
 [[on-window-detected]]
