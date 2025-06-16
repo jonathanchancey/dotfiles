@@ -37,6 +37,9 @@ alias gl='git log'
 alias cdd='cd $HOME/git/dotfiles'
 alias dots='ansible-playbook -e "@~/.local/private/vars.yml" $HOME/git/dotfiles/main.yml'
 
+# quick info
+alias get-app-id='ls /Applications/ | fzf | xargs -I{} defaults read "/Applications/{}/Contents/Info.plist" CFBundleIdentifier'
+
 # everyday quick sourcing
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
 alias sz="source $HOME/.zshrc && echo $HOME/.zshrc sourced"
