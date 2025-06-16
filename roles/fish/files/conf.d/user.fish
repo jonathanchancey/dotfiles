@@ -60,7 +60,7 @@ if status is-interactive
     eval "$(/opt/homebrew/bin/brew shellenv)"
     set pure_check_for_new_release false
     set pure_enable_single_line_prompt false
-    set pure_enable_k8s false
+    set pure_enable_k8s true
 
     # function fish_user_key_bindings
     #     # Execute this once per mode that emacs bindings should be used in
