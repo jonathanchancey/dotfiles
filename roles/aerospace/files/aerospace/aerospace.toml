@@ -57,7 +57,7 @@ outer.right =      5
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # alt-enter = 'exec-and-forget open -n -a "iterm2"'
 # cmd-enter= 'exec-and-forget open -a "Ghostty"'
-shift-cmd-e = 'exec-and-forget open -a "Finder"'
+# shift-cmd-e = 'exec-and-forget open -a "Finder"'
 cmd-e = '''
 exec-and-forget open -na "Ghostty" --args --command=yazi \
     --quit-after-last-window-closed \
