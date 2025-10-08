@@ -51,12 +51,10 @@ if status is-interactive
     eval "$(/opt/homebrew/bin/brew shellenv)"
     set pure_check_for_new_release false
     set pure_enable_single_line_prompt false
-    set pure_enable_k8s true
+    set MANPAGER 'nvim +Man!'
 
     # kubectl completion fish | source
     zoxide init fish | source
-
-    set MANPAGER 'nvim +Man!'
 
     # elegant reimplementation of sudo !!
     function last_history_item
@@ -66,4 +64,8 @@ if status is-interactive
 
     # add kubectl aliases if they exist
     test -f ~/.config/kubectl_aliases.fish && source ~/.config/kubectl_aliases.fish
+
+    if test "$WORKMODE" = true
+        set pure_enable_k8s false
+    end
 end
