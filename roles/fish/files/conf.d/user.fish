@@ -44,7 +44,8 @@ if status is-interactive
     source ~/.env
     source ~/.aliases
     source ~/.local/private/.aliases
-
+    # source bash style env removing comments
+    export (grep "^[^#]" ~/.local/private/env | xargs -L 1)
     # alias lsd to ls if it exists
     type -q lsd; and alias ls='lsd'
 
