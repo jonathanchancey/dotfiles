@@ -162,6 +162,10 @@ if.app-id = 'com.apple.TextEdit'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.github.GitHubClient'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.window-title-regex-substring = 'yazi'
 run = 'layout tiling'
 
