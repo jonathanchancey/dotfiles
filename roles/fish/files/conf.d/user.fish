@@ -12,15 +12,6 @@ function mvr
     rsync --archive -hh --partial --info=stats1,progress2 --modify-window=1 --remove-source-files $argv
 end
 
-# create a new branch with context
-function cnb
-    set branch (git branch --show-current)
-    set domain_user jchancey
-    set branch_name $argv[1]-$domain_user-$branch
-    echo $branch_name
-    git checkout -b $branch_name
-end
-
 function se
     sops --encrypt --in-place $argv
 end
@@ -49,36 +40,24 @@ end
 
 if status is-interactive
 
-    # source files 
+    # source files
     source ~/.env
     source ~/.aliases
+    source ~/.local/private/env
     source ~/.local/private/.aliases
-    # source bash style env removing comments
-    export (grep "^[^#]" ~/.local/private/env | xargs -L 1)
+
     # alias lsd to ls if it exists
     type -q lsd; and alias ls='lsd'
 
     eval "$(/opt/homebrew/bin/brew shellenv)"
     set pure_check_for_new_release false
     set pure_enable_single_line_prompt false
-    set pure_enable_k8s true
-
-    # function fish_user_key_bindings
-    #     # Execute this once per mode that emacs bindings should be used in
-    #     fish_default_key_bindings -M insert
-    #
-    #     # Then execute the vi-bindings so they take precedence when there's a conflict.
-    #     # Without --no-erase fish_vi_key_bindings will default to
-    #     # resetting all bindings.
-    #     # The argument specifies the initial mode (insert, "default" or visual).
-    #     fish_vi_key_bindings --no-erase insert
-    # end
+    set MANPAGER 'nvim +Man!'
 
     # kubectl completion fish | source
     zoxide init fish | source
 
-    set MANPAGER 'nvim +Man!'
-
+    # elegant reimplementation of sudo !!
     function last_history_item
         echo $history[1]
     end
@@ -86,4 +65,8 @@ if status is-interactive
 
     # add kubectl aliases if they exist
     test -f ~/.config/kubectl_aliases.fish && source ~/.config/kubectl_aliases.fish
+
+    if test "$WORKMODE" = true
+        set pure_enable_k8s false
+    end
 end
