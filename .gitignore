@@ -5,5 +5,7 @@ roles/fish/files/conf.d/pure.fish
 roles/fish/files/conf.d/_pure_init.fish
 roles/fish/files/fish_variables
 roles/fish/files/functions
+roles/fish/files/completions
+.zed
 .ansible/.lock
 .private
