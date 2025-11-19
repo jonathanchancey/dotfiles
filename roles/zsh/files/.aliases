@@ -1,4 +1,5 @@
 # aliases
+
 # xbps quality of life
 alias xi="brew install"
 alias xr="brew uninstall"
@@ -6,10 +7,8 @@ alias xdu="brew update"
 alias xdup="brew update && tldr --update & brew upgrade && packages"
 alias xq="brew search"
 
-# normal aliases
-alias vim=nvim
-alias v='nvim .'
-alias t='tmux'
+# basic
+alias vim='nvim'
 alias notes="cd $HOME/notes && nvim ."
 alias l='ls -l'
 alias la='ls -a'
@@ -17,10 +16,6 @@ alias lla='ls -la'
 alias lt='ls --tree'
 alias lg='lazygit'
 alias r='ranger'
-alias tf=terraform
-alias tg=terragrunt
-alias packages='$HOME/scripts/packages'
-alias a='ansible -e "@local.vars.yml"'
 alias terraform='tofu'
 
 # git
@@ -33,28 +28,21 @@ alias gcl='git clone'
 alias gd='git diff'
 alias gl='git log'
 
-# dotfiles command
-alias cdd='cd $HOME/git/dotfiles'
-alias dots='ansible-playbook -e "@~/.local/private/vars.yml" $HOME/git/dotfiles/main.yml'
-
-# quick info
+# info
 alias get-app-id='ls /Applications/ | fzf | xargs -I{} defaults read "/Applications/{}/Contents/Info.plist" CFBundleIdentifier'
 
-# everyday quick sourcing
+# sourcing
 alias sb="source $HOME/.bashrc && echo $HOME/.bashrc sourced"
 alias sz="source $HOME/.zshrc && echo $HOME/.zshrc sourced"
 alias sa="source $HOME/.aliases && echo $HOME/.aliases sourced"
 alias szp="source $HOME/.zprofile && echo $HOME/.zprofile sourced"
 alias sf="source $HOME/.config/fish/conf.d/user.fish && echo $HOME/.config/fish/conf.d/user.fish sourced"
 alias sv='source .venv/bin/activate'
-alias pwdns='kubens $(basename "$PWD")'
+alias pwd-ns='kubens $(basename "$PWD")'
 
-# quick editing
-alias ee="$EDITOR $HOME/.env"
-alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
-alias eb="$EDITOR $HOME/.bashrc"
+# editing
 alias ea="$EDITOR ~/.aliases"
-alias ev="cd $HOME/.config/nvim && $EDITOR init.lua"
+alias ee="$EDITOR $HOME/.env"
+alias epe="$EDITOR $HOME/.local/private/env"
+alias ef="$EDITOR $HOME/.config/fish/conf.d/user.fish"
 alias ed="cd $HOME/git/dotfiles && $EDITOR ."
-alias eh="cd $HOME/.config/helix/ && hx ."
-alias ek='cd $HOME/Library/CloudStorage/OneDrive-OneInc/knowledge/ && $EDITOR .'
