@@ -55,7 +55,7 @@ if status is-interactive
     set MANPAGER 'nvim +Man!'
 
     # kubectl completion fish | source
-    zoxide init fish | source
+    # zoxide init fish | source
 
     # elegant reimplementation of sudo !!
     function last_history_item
