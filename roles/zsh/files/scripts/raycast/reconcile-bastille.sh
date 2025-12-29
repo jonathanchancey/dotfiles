@@ -12,5 +12,5 @@
 # @raycast.author jonathanchancey
 # @raycast.authorURL https://raycast.com/jonathanchancey
 
-flux --context=admin@bastille reconcile source git flux-system
-flux --context=admin@bastille reconcile ks bastille-apps
+flux --context=bastille reconcile source git flux-system
+flux --context=bastille reconcile ks bastille-apps
