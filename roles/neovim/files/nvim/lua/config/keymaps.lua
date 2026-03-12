@@ -5,6 +5,10 @@ vim.keymap.set("n", "<leader>wN", "<cmd>enew<cr>", { desc = "New File in Current
 vim.keymap.set("n", "<D-s>", "<cmd>w<cr>", { desc = "Save" })
 vim.keymap.set("i", "<D-s>", "<Esc><cmd>w<cr>a", { desc = "Save" })
 
+vim.keymap.set("n", "<leader>fy", function()
+  vim.fn.setreg(vim.v.register, vim.fn.expand("%:p"))
+end, { desc = "Copy filename+line to clipboard" })
+
 -- remap quit all to quit buffer
 vim.keymap.set("n", "<leader>qq", function()
   Snacks.bufdelete()
