@@ -1,13 +1,14 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
-    "shaunsingh/nord.nvim",
+    "catppuccin/nvim",
+    -- "rebelot/kanagawa.nvim",
+    -- "shaunsingh/nord.nvim",
     -- compile = true,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "nord",
+      colorscheme = "catppuccin-mocha",
     },
   },
 }
