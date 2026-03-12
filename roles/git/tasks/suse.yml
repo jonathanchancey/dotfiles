@@ -1,6 +1,0 @@
----
-- name: "Git | Install"
-  community.general.zypper:
-    name:
-      - git
-    state: latest

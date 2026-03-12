@@ -1,12 +1,16 @@
 default_roles:
+  - aerospace
   - brew
   - fish
-  - git
   - neovim
+  - obsidian
+  - system
+  - taskfile
   - tmux
-  - fish
+  - zed
   - zsh
 
 disabled_roles:
   - utils
+  - ghostty
   - thunderbird

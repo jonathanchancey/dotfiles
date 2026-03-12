@@ -1,6 +1,6 @@
 # dotfiles
 
-![](https://github.com/jonathanchancey/assets/blob/main/images/suse-wsl.png)
+![example neofetch on opensuse](https://github.com/jonathanchancey/assets/blob/main/images/suse-wsl.png)
 
 ## Introduction
 
@@ -23,14 +23,6 @@ docker build . -t dotfiles && docker run -it dotfiles
 Enable/disable roles in `group_vars/all.yml`
 
 Customize automation in the `roles/` folder. Take the `go` folder for example. In `./roles/go/tasks/` there is `main.yml` which will always run if present in `all.yml`, and `suse.yml` which will run only on distros in the Suse family.
-
-## Neovim
-
-After installing on a new system you may have to update AstroNvim and its plugins:
-
-Open Neovim
-Run `:AstroUpdate` to update AstroNvim
-Run `:Lazy update` to update all plugins
 
 ## Credits
 
