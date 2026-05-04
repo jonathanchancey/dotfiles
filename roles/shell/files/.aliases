@@ -26,7 +26,6 @@ alias gsw='git switch'
 alias gb='git branch'
 alias gcl='git clone'
 alias gd='git diff'
-alias gl='git log'
 
 # info
 alias get-app-id='ls /Applications/ | fzf | xargs -I{} defaults read "/Applications/{}/Contents/Info.plist" CFBundleIdentifier'

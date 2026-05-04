@@ -34,8 +34,6 @@ function y
     rm -f -- "$tmp"
 end
 
-end
-
 function mkcd
     mkdir -p $argv[1] && cd $argv[1]
 end
@@ -56,6 +54,8 @@ if status is-interactive
     set pure_enable_single_line_prompt false
     set MANPAGER 'nvim +Man!'
 
+    # fzf --fish | source
+    # tv init fish | source
     # kubectl completion fish | source
     # zoxide init fish | source
 

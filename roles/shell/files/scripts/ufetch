@@ -14,14 +14,14 @@ packages=$(<$HOME/.local/state/values/packages)
 ## UI DETECTION
 
 if [ -n "${DE}" ]; then
-	ui="${DE}"
-	uitype='DE'
+  ui="${DE}"
+  uitype='DE'
 elif [ -n "${WM}" ]; then
-	ui="${WM}"
-	uitype='WM'
+  ui="${WM}"
+  uitype='WM'
 else
-	ui='Aqua'
-	uitype='UI'
+  ui='Aqua'
+  uitype='UI'
 fi
 
 ui="$(basename "${ui}")"
@@ -39,10 +39,10 @@ grey='[90m'
 reset='[0m'
 
 # you can change these
-lc="${reset}${bold}"                # labels
-nc="${reset}${bold}"                # user and hostname
-ic="${reset}"                       # info
-c0="${reset}"                       # first color
+lc="${reset}${bold}" # labels
+nc="${reset}${bold}" # user and hostname
+ic="${reset}"        # info
+c0="${reset}"        # first color
 
 ## OUTPUT
 
@@ -57,4 +57,3 @@ ${c0}   \         /  ${lc}SHELL:     ${ic}${shell}${reset}
 ${c0}    \`._.-._.\` ${lc}${ci}  ${red}███${green}███${yellow}███${blue}███${magenta}███${cyan}███${reset}
 
 EOF
-
