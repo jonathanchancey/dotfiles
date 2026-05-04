@@ -49,7 +49,14 @@ if status is-interactive
     # alias lsd to ls if it exists
     type -q lsd; and alias ls='lsd'
 
-    eval "$(/opt/homebrew/bin/brew shellenv)"
+    # bodge to prevent shell from hanging with stale smb mounts
+    set -gx HOMEBREW_PREFIX /opt/homebrew
+    set -gx HOMEBREW_CELLAR /opt/homebrew/Cellar
+    set -gx HOMEBREW_REPOSITORY /opt/homebrew
+    fish_add_path --prepend /opt/homebrew/bin /opt/homebrew/sbin
+    set -gx MANPATH /opt/homebrew/share/man $MANPATH
+    set -gx INFOPATH /opt/homebrew/share/info $INFOPATH
+
     set pure_check_for_new_release false
     set pure_enable_single_line_prompt false
     set MANPAGER 'nvim +Man!'
