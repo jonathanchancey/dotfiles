@@ -9,3 +9,4 @@ roles/fish/files/completions
 .zed
 .ansible/.lock
 .private
+*.private.*
