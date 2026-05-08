@@ -7,6 +7,9 @@ alias xdu="brew update"
 alias xdup="brew update && tldr --update & brew upgrade && packages"
 alias xq="brew search"
 
+# nix
+alias xs="nix shell nixpkgs#"
+
 # basic
 alias vim='nvim'
 alias notes="cd $HOME/notes && nvim ."
