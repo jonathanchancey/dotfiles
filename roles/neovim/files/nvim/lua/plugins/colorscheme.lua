@@ -1,14 +1,20 @@
+local hostname = vim.fn.hostname()
+
+local colorscheme = "catppuccin-mocha"
+
+if hostname == "om3.local" then
+  colorscheme = "nord"
+end
+
 return {
   {
     "catppuccin/nvim",
-    -- "rebelot/kanagawa.nvim",
-    -- "shaunsingh/nord.nvim",
-    -- compile = true,
+    "shaunsingh/nord.nvim",
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha",
+      colorscheme = colorscheme,
     },
   },
 }

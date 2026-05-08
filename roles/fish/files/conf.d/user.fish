@@ -34,15 +34,6 @@ function y
     rm -f -- "$tmp"
 end
 
-# wrapper to reset colors on ssh exit
-# works pretty well but maybe too weird
-function ssh
-    command ssh $argv
-    printf '\033]104\033\\'
-    printf '\033]110\033\\'
-    printf '\033]111\033\\'
-end
-
 function mkcd
     mkdir -p $argv[1] && cd $argv[1]
 end
@@ -70,6 +61,8 @@ if status is-interactive
     set pure_enable_single_line_prompt false
     set MANPAGER 'nvim +Man!'
 
+    # fzf --fish | source
+    # tv init fish | source
     # kubectl completion fish | source
     # zoxide init fish | source
 
