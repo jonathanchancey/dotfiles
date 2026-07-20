@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "file_types": {
+    "JSONC": ["**/.zed/**/*.json", "**/zed/**/*.json", "**/Zed/**/*.json"]
+  },
   "vim_mode": true,
   "theme": "Fleet Dark",
   "ui_font_size": 17,
