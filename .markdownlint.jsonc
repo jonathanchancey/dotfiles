@@ -1,9 +1,9 @@
 {
-    "MD013": false, // allow long lines
-    "MD025": false, // allow multiple H1s
-    "MD026": false, // allow punctuation
-    "MD028": false, // allow blank lines
-    "MD029": false, // allow inconsistent numbering
-    "MD033": false, // allow HTML tags
-    "MD041": false, // don't require H1 as first line
+  "MD013": false, // allow long lines
+  "MD025": false, // allow multiple H1s
+  "MD026": false, // allow punctuation
+  "MD028": false, // allow blank lines
+  "MD029": false, // allow inconsistent numbering
+  "MD033": false, // allow HTML tags
+  "MD041": false, // allow content other than H1 on first line
 }
