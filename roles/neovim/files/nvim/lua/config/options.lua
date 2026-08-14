@@ -3,3 +3,4 @@
 -- Add any additional options here
 --
 vim.g.python3_host_prog = "~/.config/nvim/venv/bin/python"
+vim.o.shell = "/opt/homebrew/bin/fish"
