@@ -24,6 +24,12 @@ vim.keymap.set("n", "<leader>fy", function()
   vim.fn.setreg(vim.v.register, vim.fn.expand("%:p"))
 end, { desc = "Copy filename+line to clipboard" })
 
+vim.keymap.set({ "n", "t" }, "<C-.>", function()
+  local terminal = vim.b.snacks_terminal
+  local cwd = terminal and terminal.cwd or vim.fn.expand("%:p:h")
+  Snacks.terminal(nil, { cwd = cwd ~= "" and cwd or vim.fn.getcwd() })
+end, { desc = "Terminal (Buffer Dir)" })
+
 -- remap quit all to quit buffer
 vim.keymap.set("n", "<leader>qq", function()
   Snacks.bufdelete()
