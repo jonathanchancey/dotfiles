@@ -2,7 +2,7 @@ local hostname = vim.fn.hostname()
 
 local colorscheme = "catppuccin-mocha"
 
-if hostname == "Mac.localdomain" then
+if hostname == "Mac.localdomain" or hostname == "om3" then
   colorscheme = "nord"
 end
 
